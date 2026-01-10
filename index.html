@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LINK UP - Ahorra con cupones de descuento y construye una red que genera ingresos compartiendo lo que te gusta.">
+    <title>LINK UP - Ahorra y Gana Compartiendo</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- =========================
+         HEADER / NAVEGACIÓN
+    ========================= -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#beneficios">Beneficios</a>
+                <a href="#resultados">Resultados</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#faqs">FAQs</a>
+            </div>
+            <a href="#" class="btn-login">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                </svg>
+                Inicia Sesión
+            </a>
+        </nav>
+    </header>
+
+    <!-- =========================
+         SECCIÓN 1: HERO (SER)
+    ========================= -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">                <img src="img/logo-ofcweb.png" alt="LINK UP Logo" class="hero-logo">
+                <h1 class="hero-title">
+                    Ahorra en tus compras favoritas <span class="highlight">y genera ingresos compartiendo</span>
+                </h1>
+                <p class="hero-subtitle">
+                    LINK UP conecta personas y comercios para que ahorres con cupones reales y construyas una red que te beneficia
+                </p>
+                <div class="hero-ctas">
+                    <a href="#cta" class="btn btn-primary">Unirme con invitación</a>
+                    <a href="#beneficios" class="btn btn-secondary">Cómo funciona</a>
+                </div>
+            </img>
+        </div>
+    </section>
+
+    <!-- =========================
+         SECCIÓN 2: COMUNICACIÓN / PROBLEMA (HACER)
+    ========================= -->
+    <section class="problem" id="problema">
+        <div class="container">
+            <div class="problem-content">
+                <h2>Compras todos los días.<br>¿Y si cada compra te devolviera algo?</h2>
+                <div class="problem-grid">
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Compras, pagas… y ahí termina todo</h3>
+                        <p>Vas al mismo lugar, consumes lo mismo de siempre y sigues adelante. Tu compra cumple su función, pero no te deja nada más.</p>
+                    </div>
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Recomiendas porque confían en ti</h3>
+                        <p>Dices "anda a este lugar", "prueba esto", "vale la pena". Eso mueve personas, decisiones y consumo… pero normalmente ahí se corta la historia.</p>
+                    </div>
+                </div>
+                <div class="solution-text">
+                    <h3>LINK UP conecta esos puntos</h3>
+                    <p><strong>No cambia lo que haces. Cambia lo que obtienes por hacerlo.</strong></p>
+                    <p>Compras, aprovechas promociones reales y ese beneficio vuelve a ti. Recomiendas, y esa confianza se transforma en algo que crece contigo, de forma clara y transparente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         SECCIÓN 3: BENEFICIOS (HACER)
+    ========================= -->
+    <section class="benefits" id="beneficios">
+        <div class="container">
+            <h2 class="section-title">¿Qué obtienes con LINK UP?</h2>
+            
+            <div class="benefits-grid">
+                <!-- Beneficio 1 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Ahorra con cupones reales</h3>
+                    <p>Accede a descuentos exclusivos en comercios verificados. Ahorro real en tus compras habituales</p>
+                </div>
+
+                <!-- Beneficio 2 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Construye tu red</h3>
+                    <p>Invita a personas que también quieran ahorrar. Cada uno construye su propia comunidad</p>
+                </div>
+
+                <!-- Beneficio 3 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Recibe comisiones hasta 5 niveles</h3>
+                    <p>Cuando tu red usa cupones, generas ingresos. Sistema transparente de 5 niveles de profundidad</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Cómo ser parte -->
+        <div class="how-to-join">
+                <div class="join-content">
+                    <div class="join-left">
+                        <div class="join-badge">📱 Tu inicio en LINK UP</div>
+                        <h3>Empieza en 3 pasos simples</h3>
+                        <p class="join-subtitle">Accede al sistema desde cualquier lugar. LINK UP funciona desde tu móvil u ordenador.</p>
+                        
+                        <div class="join-steps">
+                            <div class="join-step">
+                                <div class="join-step-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <div class="join-step-content">
+                                    <h4>Paso 1: Recibe tu invitación</h4>
+                                    <p>Un miembro activo te comparte su código de referido. Solo necesitas tu email y una contraseña.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="join-step">
+                                <div class="join-step-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <div class="join-step-content">
+                                    <h4>Paso 2: Crea tu cuenta</h4>
+                                    <p>Regístrate usando el código de invitación. Tu cuenta queda activa de inmediato.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="join-step">
+                                <div class="join-step-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <div class="join-step-content">
+                                    <h4>Paso 3: Empieza a usar</h4>
+                                    <p>Accede a cupones, comparte tu código y comienza a construir tu red de forma transparente.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="join-right">
+                        <div class="join-visual">
+                            <div class="phone-mockup">
+                                <div class="phone-frame">
+                                    <div class="phone-notch"></div>
+                                    <div class="phone-screen">
+                                        <div class="screen-slides">
+                                            <!-- Slide 1 -->
+                                            <div class="screen-slide active" data-slide="1">
+                                                <div class="slide-content">
+                                                    <div class="slide-icon">
+                                                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                                                        </svg>
+                                                    </div>
+                                                    <h4>¡Comienza!</h4>
+                                                    <p>Accede a tu dashboard</p>
+                                                    <div class="slide-dots">
+                                                        <span></span><span></span><span></span>
+                                                    </div>
+                                                    <button class="slide-button">Ir a LINK UP</button>
+                                                </div>
+                                            </div>
+                                            <!-- Slide 2 -->
+                                            <div class="screen-slide" data-slide="2">
+                                                <div class="slide-content">
+                                                    <div class="slide-icon">
+                                                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z" fill="currentColor"/>
+                                                        </svg>
+                                                    </div>
+                                                    <h4>Usa cupones</h4>
+                                                    <p>Ahorra en tus compras favoritas</p>
+                                                    <div class="slide-dots">
+                                                        <span></span><span></span><span></span>
+                                                    </div>
+                                                    <button class="slide-button">Ver cupones</button>
+                                                </div>
+                                            </div>
+                                            <!-- Slide 3 -->
+                                            <div class="screen-slide" data-slide="3">
+                                                <div class="slide-content">
+                                                    <div class="slide-icon">
+                                                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="currentColor"/>
+                                                        </svg>
+                                                    </div>
+                                                    <h4>Construye tu red</h4>
+                                                    <p>Invita y genera ingresos</p>
+                                                    <div class="slide-dots">
+                                                        <span></span><span></span><span></span>
+                                                    </div>
+                                                    <button class="slide-button">Compartir código</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Navigation Buttons -->
+                                    <div class="phone-nav">
+                                        <button class="nav-btn prev-btn" onclick="changeSlide(-1)">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor"/>
+                                            </svg>
+                                        </button>
+                                        <button class="nav-btn next-btn" onclick="changeSlide(1)">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Phone indicator -->
+                                <div class="phone-indicator">📱</div>
+                            </div>
+                            <div class="visual-stars">
+                                <span class="star" style="top: 10%; left: 15%;">★</span>
+                                <span class="star" style="top: 25%; right: 20%;">★</span>
+                                <span class="star" style="bottom: 30%; left: 10%;">★</span>
+                                <span class="star" style="top: 60%; right: 15%;">★</span>
+                                <span class="star" style="bottom: 15%; right: 25%;">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         SECCIÓN 4: RESULTADO (TENER)
+    ========================= -->
+    <section class="results" id="resultados">
+        <div class="container">
+            <h2 class="section-title">Lo que obtienes es real y transparente</h2>
+            
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h4>Ahorro acumulado visible</h4>
+                    <p>Ve cuánto has ahorrado en tiempo real con cada cupón usado</p>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h4>Red visible</h4>
+                    <p>Consulta tu árbol de referidos y su actividad en cualquier momento</p>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h4>Comisiones automáticas</h4>
+                    <p>Se calculan y reflejan automáticamente cada vez que se usa un cupón</p>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h4>Transparencia total</h4>
+                    <p>Sin costos ocultos. Todo está claro desde el inicio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         SECCIÓN 5: CTA FUERTE
+    ========================= -->
+    <section class="cta-strong" id="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Empieza a ahorrar y construir tu comunidad hoy</h2>
+                <p>Únete a una red donde todos ganan: ahorra, comparte y genera ingresos de forma transparente</p>
+                <a href="#" class="btn btn-large" aria-label="Unirme a LINK UP con código de invitación">Unirme con invitación</a>
+                <p class="cta-note">Necesitas un código de invitación de un miembro activo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         SECCIÓN 6: SOBRE NOSOTROS (SER)
+    ========================= -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <h2 class="section-title">¿Qué es LINK UP?</h2>
+            <div class="about-content">
+                <p class="about-lead">
+                    Somos una plataforma que cree en la <strong>economía circular</strong> y el <strong>beneficio mutuo</strong>.
+                </p>
+                <p>
+                    Conectamos personas que quieren ahorrar con comercios que ofrecen descuentos reales. 
+                    Al mismo tiempo, premiamos a quienes comparten y construyen comunidad.
+                </p>
+                <p>
+                    Nuestra visión es simple: <strong>transparencia total</strong>, reglas claras y una red donde 
+                    todos puedan beneficiarse de forma justa. No prometemos riqueza instantánea, sino una forma 
+                    inteligente de ahorrar y generar ingresos compartiendo lo que realmente funciona.
+                </p>
+                <div class="about-values">
+                    <div class="value">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="currentColor"/>
+                        </svg>
+                        <span>Transparencia</span>
+                    </div>
+                    <div class="value">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="currentColor"/>
+                        </svg>
+                        <span>Comunidad</span>
+                    </div>
+                    <div class="value">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" fill="currentColor"/>
+                        </svg>
+                        <span>Beneficio mutuo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         SECCIÓN 7: FAQs
+    ========================= -->
+    <section class="faqs" id="faqs">
+        <div class="container">
+            <h2 class="section-title">Preguntas frecuentes</h2>
+            
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>¿Qué es LINK UP?</summary>
+                    <p>
+                        LINK UP es una plataforma que conecta personas con comercios para ofrecer cupones de descuento reales. 
+                        Además, cuenta con un sistema de referidos que te permite generar ingresos cuando tu red usa cupones.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Necesito una invitación para unirme?</summary>
+                    <p>
+                        Sí. Para mantener la calidad de la comunidad y garantizar el funcionamiento del sistema de referidos, 
+                        necesitas un código de invitación de un miembro activo.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Cómo gano con LINK UP?</summary>
+                    <p>
+                        De dos formas: <strong>1)</strong> Ahorrando con los cupones de descuento en tus compras habituales, 
+                        y <strong>2)</strong> Recibiendo comisiones cuando las personas que invitas (y su red) usan cupones.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Cuántos niveles paga el sistema de referidos?</summary>
+                    <p>
+                        El sistema paga hasta <strong>5 niveles de profundidad</strong>. Esto significa que recibes comisiones 
+                        de las personas que invitas directamente y de hasta 4 niveles adicionales en tu red.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Hay costos ocultos?</summary>
+                    <p>
+                        No. LINK UP es transparente. El registro es gratuito y no hay cuotas mensuales ni cargos escondidos. 
+                        Solo usas los cupones cuando quieres ahorrar.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Puedo cambiar de sponsor o persona que me invitó?</summary>
+                    <p>
+                        No. Una vez que te registras con un código de invitación, esa persona queda como tu sponsor permanente. 
+                        Por eso es importante elegir bien quién te invita.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         SECCIÓN 8: FOOTER
+    ========================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>LINK UP</h4>
+                    <p>Ahorra, comparte y genera ingresos de forma transparente</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#terminos">Términos y condiciones</a></li>
+                        <li><a href="#privacidad">Política de privacidad</a></li>
+                        <li><a href="#cookies">Política de cookies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Contacto</h5>
+                    <ul>
+                        <li><a href="mailto:info@linkup.community">info@linkup.community</a></li>
+                        <li><a href="#soporte">Soporte</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Síguenos</h5>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.46 6c-.85.38-1.78.64-2.75.76 1-.6 1.76-1.55 2.12-2.68-.93.55-1.96.96-3.06 1.18A4.83 4.83 0 0 0 15.2 4c-2.67 0-4.83 2.16-4.83 4.83 0 .38.04.75.13 1.1-4.02-.2-7.58-2.13-9.96-5.05a4.83 4.83 0 0 0 1.5 6.44c-.8-.02-1.55-.24-2.2-.6v.06c0 2.34 1.66 4.29 3.87 4.73-.4.11-.83.17-1.27.17-.31 0-.62-.03-.92-.08.63 1.96 2.44 3.38 4.6 3.42a9.68 9.68 0 0 1-6 2.07c-.39 0-.77-.02-1.15-.07 2.14 1.37 4.68 2.17 7.41 2.17 8.9 0 13.76-7.37 13.76-13.76 0-.21 0-.42-.01-.63.95-.68 1.77-1.54 2.42-2.51z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 LINK UP. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón de Chat IA Flotante -->
+    <div class="chat-widget">
+        <button class="chat-button" id="chatButton" aria-label="Abrir chat de soporte">
+            <img class="chat-icon" src="https://res.cloudinary.com/df7h4kmrk/image/upload/v1768053513/cupichat_oudhnt.gif" alt="Chat" width="56" height="56">
+            <svg class="close-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
+            </svg>
+        </button>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar">
+                        <img src="img/cupi_profile.png" alt="Cupi" width="40" height="40">
+                    </div>
+                    <div>
+                        <h4>Cupi Asistente Virtual</h4>
+                        <span class="status-online">En línea</span>
+                    </div>
+                </div>
+                <button class="minimize-btn" id="minimizeChat" aria-label="Minimizar chat">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 13H5v-2h14v2z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="chat-message bot-message">
+                    <div class="message-avatar">
+                        <img src="img/cupi_profile.png" alt="Cupi" width="32" height="32">
+                    </div>
+                    <div class="message-content">
+                        <p>¡Hola! 👋 Soy Cupi tu asistente virtual de LINK UP. ¿En qué puedo ayudarte hoy?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." aria-label="Campo de mensaje">
+                <button class="send-btn" id="sendButton" aria-label="Enviar mensaje">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
