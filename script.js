@@ -19,6 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
                         behavior: 'smooth',
                         block: 'start'
                     });
+                    
+                    // Cerrar menú mobile si está abierto
+                    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+                    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+                    if (mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
+                        mobileMenuOverlay.classList.remove('active');
+                        mobileMenuToggle.classList.remove('active');
+                        document.body.style.overflow = '';
+                        document.body.classList.remove('menu-open');
+                    }
                 }
             }
         });
@@ -26,6 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Inicializar animación de círculos en el hero
     initHeroCircles();
+    
+    // Inicializar menú mobile
+    initMobileMenu();
 });
 
 // ========================================
@@ -262,3 +275,49 @@ chatInput.addEventListener('keypress', (e) => {
         handleSendMessage();
     }
 });
+
+// ========================================
+// MENÚ MOBILE
+// ========================================
+
+function initMobileMenu() {
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    
+    if (!mobileMenuToggle || !mobileMenuOverlay) return;
+    
+    // Abrir/cerrar menú con botón hamburguesa
+    mobileMenuToggle.addEventListener('click', () => {
+        mobileMenuToggle.classList.toggle('active');
+        mobileMenuOverlay.classList.toggle('active');
+        
+        // Prevenir scroll del body cuando el menú está abierto
+        if (mobileMenuOverlay.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+            document.body.classList.add('menu-open');
+        } else {
+            document.body.style.overflow = '';
+            document.body.classList.remove('menu-open');
+        }
+    });
+    
+    // Cerrar menú al hacer click fuera del contenido
+    mobileMenuOverlay.addEventListener('click', (e) => {
+        if (e.target === mobileMenuOverlay) {
+            mobileMenuToggle.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+            document.body.classList.remove('menu-open');
+        }
+    });
+    
+    // Cerrar menú con tecla ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
+            mobileMenuToggle.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+            document.body.classList.remove('menu-open');
+        }
+    });
+}
