@@ -954,6 +954,891 @@ strong {
 }
 
 /* =========================
+   SECCIÓN: PLAN DE RECOMPENSAS
+========================= */
+.rewards-plan {
+    padding: var(--spacing-xxl) 0;
+    background: linear-gradient(180deg, var(--color-light) 0%, #f8f4f5 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.rewards-plan::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(130, 44, 62, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(173, 99, 154, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.rewards-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+    z-index: 1;
+}
+
+.rewards-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: linear-gradient(135deg, #822c3e 0%, #ad639a 100%);
+    color: white;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    box-shadow: 0 4px 12px rgba(130, 44, 62, 0.2);
+}
+
+.rewards-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-gray);
+    max-width: 700px;
+    margin: var(--spacing-md) auto 0;
+    line-height: 1.6;
+}
+
+/* Botones de alternancia Plan de Recompensas */
+.rewards-toggle-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.rewards-toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 12px 28px;
+    background: white;
+    border: 2px solid var(--color-border);
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.rewards-toggle-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-primary);
+}
+
+.rewards-toggle-btn.active {
+    background: linear-gradient(135deg, #822c3e 0%, #ad639a 100%);
+    color: white;
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 16px rgba(130, 44, 62, 0.3);
+}
+
+.rewards-toggle-btn svg {
+    opacity: 0.7;
+    transition: var(--transition);
+}
+
+.rewards-toggle-btn.active svg {
+    opacity: 1;
+}
+
+/* Contenedores de planes */
+.rewards-content {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Árbol de Recompensas - Carrusel */
+.rewards-visual {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.rewards-carousel {
+    position: relative;
+    padding: 0 60px;
+    margin-bottom: var(--spacing-xl);
+}
+
+.carousel-container {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-md);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.tree-level {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+/* Tarjetas de Nivel */
+.level-card {
+    background: white;
+    border-radius: 16px;
+    padding: var(--spacing-lg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    max-width: 500px;
+    width: 100%;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.level-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(130, 44, 62, 0.15);
+    border-color: rgba(130, 44, 62, 0.2);
+}
+
+.level-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: var(--spacing-md);
+}
+
+.level-number {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #822c3e 0%, #ad639a 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.level-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+.level-commission {
+    text-align: center;
+    padding: var(--spacing-md);
+    background: linear-gradient(135deg, rgba(130, 44, 62, 0.05) 0%, rgba(173, 99, 154, 0.05) 100%);
+    border-radius: 12px;
+    margin-bottom: var(--spacing-md);
+}
+
+.commission-value {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #822c3e 0%, #ad639a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.commission-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--color-gray);
+}
+
+/* Nodos de personas */
+.level-nodes {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.tree-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.node-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, rgba(130, 44, 62, 0.1) 0%, rgba(173, 99, 154, 0.1) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #822c3e;
+    transition: all 0.3s ease;
+}
+
+.node-icon.small {
+    width: 36px;
+    height: 36px;
+}
+
+.node-icon:hover {
+    background: linear-gradient(135deg, #822c3e 0%, #ad639a 100%);
+    color: white;
+    transform: scale(1.1);
+}
+
+.node-label {
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 600;
+}
+
+/* Botones del Carrusel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid rgba(130, 44, 62, 0.2);
+    color: #822c3e;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: linear-gradient(135deg, #822c3e 0%, #ad639a 100%);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(130, 44, 62, 0.3);
+}
+
+.carousel-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-btn.prev-btn {
+    left: 0;
+}
+
+.carousel-btn.next-btn {
+    right: 0;
+}
+
+/* Indicadores del Carrusel */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: var(--spacing-lg);
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(130, 44, 62, 0.2);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.indicator:hover {
+    background: rgba(130, 44, 62, 0.5);
+    transform: scale(1.2);
+}
+
+.indicator.active {
+    width: 32px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #822c3e 0%, #ad639a 100%);
+}
+
+/* Total de Comisiones */
+.rewards-total {
+    margin-top: var(--spacing-xl);
+    display: flex;
+    justify-content: center;
+}
+
+.total-card {
+    background: linear-gradient(135deg, #822c3e 0%, #ad639a 100%);
+    color: white;
+    padding: var(--spacing-xl);
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 12px 40px rgba(130, 44, 62, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.total-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.total-icon {
+    margin: 0 auto var(--spacing-md);
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.total-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    z-index: 1;
+}
+
+.total-percentage {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: var(--spacing-md) 0;
+    position: relative;
+    z-index: 1;
+}
+
+.total-description {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Calculadora Financiera */
+.rewards-calculator {
+    margin-top: var(--spacing-xxl);
+    background: white;
+    padding: var(--spacing-xl);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.calculator-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.calculator-header h3 {
+    font-size: 1.75rem;
+    color: var(--color-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+.calculator-subtitle {
+    font-size: 1.05rem;
+    color: var(--color-gray);
+    margin: 0;
+}
+
+.calculator-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+/* Inputs */
+.calculator-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, rgba(130, 44, 62, 0.03) 0%, rgba(173, 99, 154, 0.03) 100%);
+    border-radius: 16px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.input-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.input-label label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+.tooltip-btn {
+    background: transparent;
+    border: none;
+    color: var(--color-primary);
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.tooltip-btn:hover {
+    background: rgba(130, 44, 62, 0.1);
+    transform: scale(1.1);
+}
+
+.tooltip-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+    background: var(--color-dark);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 100;
+    max-width: 200px;
+    white-space: normal;
+    text-align: center;
+}
+
+.tooltip-btn:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-4px);
+}
+
+.input-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.slider {
+    flex: 1;
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(to right, #822c3e 0%, #ad639a 100%);
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid #822c3e;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 3px 12px rgba(130, 44, 62, 0.4);
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid #822c3e;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.number-input,
+.number-input-full {
+    width: 80px;
+    padding: 8px 12px;
+    border: 2px solid rgba(130, 44, 62, 0.2);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    text-align: center;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.number-input-full {
+    width: 100px;
+}
+
+.number-input:focus,
+.number-input-full:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(130, 44, 62, 0.1);
+}
+
+.input-suffix {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* Toggle */
+.toggle-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: var(--spacing-sm) 0;
+}
+
+.toggle-label {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+}
+
+.toggle-label input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+    border-radius: 28px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.toggle-label input:checked + .toggle-slider {
+    background: linear-gradient(135deg, #822c3e 0%, #ad639a 100%);
+}
+
+.toggle-label input:checked + .toggle-slider:before {
+    transform: translateX(24px);
+}
+
+.toggle-text {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+/* Resultados Destacados */
+.calculator-results {
+    padding: var(--spacing-lg);
+}
+
+.result-highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.result-highlight {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, rgba(130, 44, 62, 0.05) 0%, rgba(173, 99, 154, 0.05) 100%);
+    border-radius: 16px;
+    border: 2px solid rgba(130, 44, 62, 0.1);
+    transition: all 0.3s ease;
+}
+
+.result-highlight:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(130, 44, 62, 0.15);
+    border-color: rgba(130, 44, 62, 0.3);
+}
+
+.result-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #822c3e 0%, #ad639a 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+}
+
+.result-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.result-label {
+    font-size: 0.85rem;
+    color: var(--color-gray);
+    font-weight: 500;
+}
+
+.result-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #822c3e 0%, #ad639a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Tabla */
+.calculator-table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.calculator-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.calculator-table thead {
+    background: linear-gradient(135deg, #822c3e 0%, #ad639a 100%);
+    color: white;
+}
+
+.calculator-table th {
+    padding: var(--spacing-md);
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.calculator-table td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 0.9rem;
+}
+
+.calculator-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.calculator-table tbody tr:hover {
+    background: rgba(130, 44, 62, 0.02);
+}
+
+.calculator-table tfoot {
+    background: rgba(130, 44, 62, 0.05);
+    font-weight: 600;
+}
+
+.calculator-table tfoot td {
+    border-bottom: none;
+    color: var(--color-dark);
+}
+
+/* Disclaimer */
+.calculator-disclaimer {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: var(--spacing-md);
+    background: rgba(255, 193, 7, 0.1);
+    border-left: 4px solid #ffc107;
+    border-radius: 8px;
+}
+
+.calculator-disclaimer svg {
+    flex-shrink: 0;
+    color: #f57c00;
+    margin-top: 2px;
+}
+
+.calculator-disclaimer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-dark);
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .rewards-plan {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .rewards-carousel {
+        padding: 0 40px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .rewards-calculator {
+        padding: var(--spacing-md);
+    }
+
+    .calculator-inputs {
+        grid-template-columns: 1fr;
+        padding: var(--spacing-md);
+    }
+
+    .result-highlight-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .calculator-table {
+        font-size: 0.8rem;
+    }
+
+    .calculator-table th,
+    .calculator-table td {
+        padding: var(--spacing-sm);
+    }
+
+    .level-card {
+        padding: var(--spacing-md);
+    }
+
+    .commission-value {
+        font-size: 2rem;
+    }
+
+    .level-nodes {
+        gap: 12px;
+    }
+
+    .node-icon.small {
+        width: 32px;
+        height: 32px;
+    }
+
+    .total-percentage {
+        font-size: 3rem;
+    }
+
+    .example-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: var(--spacing-sm);
+    }
+
+    .example-value {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .rewards-carousel {
+        padding: 0 35px;
+    }
+
+    .carousel-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .carousel-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .level-card {
+        padding: var(--spacing-sm);
+    }
+
+    .level-name {
+        font-size: 0.95rem;
+    }
+
+    .indicator {
+        width: 10px;
+        height: 10px;
+    }
+
+    .indicator.active {
+        width: 24px;
+    }
+}
+
+/* =========================
    SECCIÓN: CTA FUERTE
 ========================= */
 .cta-strong {

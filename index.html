@@ -368,7 +368,657 @@
     </section>
 
     <!-- =========================
-         SECCIÓN 5: CTA FUERTE
+         SECCIÓN 5: PLAN DE RECOMPENSAS
+    ========================= -->
+    <section class="rewards-plan" id="plan-recompensas">
+        <div class="container">
+            <div class="rewards-header">
+                <span class="rewards-badge">💰 Sistema de Comisiones</span>
+                <h2 class="section-title">Plan de Recompensas</h2>
+                <p class="rewards-subtitle">Construye tu red y recibe comisiones automáticas hasta 5 niveles de profundidad</p>
+                
+                <!-- Botones de alternancia -->
+                <div class="rewards-toggle-buttons">
+                    <button class="rewards-toggle-btn active" data-plan="recomendacion">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="currentColor"/>
+                        </svg>
+                        Plan de Recomendación
+                    </button>
+                    <button class="rewards-toggle-btn" data-plan="consumo">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" fill="currentColor"/>
+                        </svg>
+                        Plan de Consumo
+                    </button>
+                </div>
+            </div>
+
+            <!-- Plan de Recomendación -->
+            <div class="rewards-content" id="plan-recomendacion-content">
+                <div class="rewards-visual">
+                <!-- Carrusel de Niveles -->
+                <div class="rewards-carousel">
+                    <button class="carousel-btn prev-btn" id="rewardsPrevBtn" aria-label="Nivel anterior">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="carousel-container">
+                        <div class="carousel-track" id="rewardsCarouselTrack">
+                            <!-- Nivel 1 - Primera Generación -->
+                            <div class="tree-level level-1 carousel-slide active">
+                        <div class="level-card">
+                            <div class="level-header">
+                                <span class="level-number">1</span>
+                                <span class="level-name">Primera Generación</span>
+                            </div>
+                            <div class="level-commission">
+                                <span class="commission-value">10%</span>
+                                <span class="commission-label">de comisión</span>
+                            </div>
+                            <div class="level-nodes">
+                                <div class="tree-node">
+                                    <div class="node-icon small">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="tree-node">
+                                    <div class="node-icon small">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="tree-node">
+                                    <div class="node-icon small">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nivel 2 -->
+                    <div class="tree-level level-2 carousel-slide">
+                        <div class="level-card">
+                            <div class="level-header">
+                                <span class="level-number">2</span>
+                                <span class="level-name">Segunda Generación</span>
+                            </div>
+                            <div class="level-commission">
+                                <span class="commission-value">5%</span>
+                                <span class="commission-label">de comisión</span>
+                            </div>
+                            <div class="level-nodes">
+                                <div class="tree-node">
+                                    <div class="node-icon small">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="tree-node">
+                                    <div class="node-icon small">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="tree-node">
+                                    <div class="node-icon small">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nivel 3 -->
+                    <div class="tree-level level-3 carousel-slide">
+                        <div class="level-card">
+                            <div class="level-header">
+                                <span class="level-number">3</span>
+                                <span class="level-name">Tercera Generación</span>
+                            </div>
+                            <div class="level-commission">
+                                <span class="commission-value">5%</span>
+                                <span class="commission-label">de comisión</span>
+                            </div>
+                            <div class="level-nodes">
+                                <div class="tree-node">
+                                    <div class="node-icon small">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="tree-node">
+                                    <div class="node-icon small">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="tree-node">
+                                    <div class="node-icon small">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nivel 4 -->
+                    <div class="tree-level level-4 carousel-slide">
+                        <div class="level-card">
+                            <div class="level-header">
+                                <span class="level-number">4</span>
+                                <span class="level-name">Cuarta Generación</span>
+                            </div>
+                            <div class="level-commission">
+                                <span class="commission-value">3%</span>
+                                <span class="commission-label">de comisión</span>
+                            </div>
+                            <div class="level-nodes">
+                                <div class="tree-node">
+                                    <div class="node-icon small">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="tree-node">
+                                    <div class="node-icon small">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="tree-node">
+                                    <div class="node-icon small">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nivel 5 -->
+                    <div class="tree-level level-5 carousel-slide">
+                        <div class="level-card">
+                            <div class="level-header">
+                                <span class="level-number">5</span>
+                                <span class="level-name">Quinta Generación</span>
+                            </div>
+                            <div class="level-commission">
+                                <span class="commission-value">2%</span>
+                                <span class="commission-label">de comisión</span>
+                            </div>
+                            <div class="level-nodes">
+                                <div class="tree-node">
+                                    <div class="node-icon small">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="tree-node">
+                                    <div class="node-icon small">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="tree-node">
+                                    <div class="node-icon small">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-btn next-btn" id="rewardsNextBtn" aria-label="Siguiente nivel">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    
+                    <!-- Indicadores -->
+                    <div class="carousel-indicators">
+                        <button class="indicator active" data-slide="0" aria-label="Ir a nivel 1"></button>
+                        <button class="indicator" data-slide="1" aria-label="Ir a nivel 2"></button>
+                        <button class="indicator" data-slide="2" aria-label="Ir a nivel 3"></button>
+                        <button class="indicator" data-slide="3" aria-label="Ir a nivel 4"></button>
+                        <button class="indicator" data-slide="4" aria-label="Ir a nivel 5"></button>
+                    </div>
+                </div>
+
+                <!-- Total de Comisiones -->
+                <div class="rewards-total">
+                    <div class="total-card">
+                        <div class="total-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Total acumulado</h3>
+                        <p class="total-percentage">25%</p>
+                        <p class="total-description">Suma total de comisiones de todas tus generaciones</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- Fin Plan de Recomendación -->
+
+            <!-- Plan de Consumo -->
+            <div class="rewards-content" id="plan-consumo-content" style="display: none;">
+                <div class="rewards-visual">
+                    <!-- Carrusel de Niveles de Consumo -->
+                    <div class="rewards-carousel">
+                        <button class="carousel-btn prev-btn" id="consumoPrevBtn" aria-label="Nivel anterior">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                        
+                        <div class="carousel-container">
+                            <div class="carousel-track" id="consumoCarouselTrack">
+                                <!-- Nivel 0 - Mi Consumo -->
+                                <div class="tree-level level-0 carousel-slide active">
+                                    <div class="level-card">
+                                        <div class="level-header">
+                                            <span class="level-number">0</span>
+                                            <span class="level-name">Mi Consumo</span>
+                                        </div>
+                                        <div class="level-commission">
+                                            <span class="commission-value">30%</span>
+                                            <span class="commission-label">del cupón</span>
+                                        </div>
+                                        <div class="level-nodes">
+                                            <div class="tree-node">
+                                                <div class="node-icon">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Nivel 1 -->
+                                <div class="tree-level level-1 carousel-slide">
+                                    <div class="level-card">
+                                        <div class="level-header">
+                                            <span class="level-number">1</span>
+                                            <span class="level-name">Primera Generación</span>
+                                        </div>
+                                        <div class="level-commission">
+                                            <span class="commission-value">15%</span>
+                                            <span class="commission-label">del cupón</span>
+                                        </div>
+                                        <div class="level-nodes">
+                                            <div class="tree-node">
+                                                <div class="node-icon small">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="tree-node">
+                                                <div class="node-icon small">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="tree-node">
+                                                <div class="node-icon small">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Nivel 2 -->
+                                <div class="tree-level level-2 carousel-slide">
+                                    <div class="level-card">
+                                        <div class="level-header">
+                                            <span class="level-number">2</span>
+                                            <span class="level-name">Segunda Generación</span>
+                                        </div>
+                                        <div class="level-commission">
+                                            <span class="commission-value">10%</span>
+                                            <span class="commission-label">del cupón</span>
+                                        </div>
+                                        <div class="level-nodes">
+                                            <div class="tree-node">
+                                                <div class="node-icon small">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="tree-node">
+                                                <div class="node-icon small">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="tree-node">
+                                                <div class="node-icon small">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Nivel 3 -->
+                                <div class="tree-level level-3 carousel-slide">
+                                    <div class="level-card">
+                                        <div class="level-header">
+                                            <span class="level-number">3</span>
+                                            <span class="level-name">Tercera Generación</span>
+                                        </div>
+                                        <div class="level-commission">
+                                            <span class="commission-value">5%</span>
+                                            <span class="commission-label">del cupón</span>
+                                        </div>
+                                        <div class="level-nodes">
+                                            <div class="tree-node">
+                                                <div class="node-icon small">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="tree-node">
+                                                <div class="node-icon small">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="tree-node">
+                                                <div class="node-icon small">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Nivel 4 -->
+                                <div class="tree-level level-4 carousel-slide">
+                                    <div class="level-card">
+                                        <div class="level-header">
+                                            <span class="level-number">4</span>
+                                            <span class="level-name">Cuarta Generación</span>
+                                        </div>
+                                        <div class="level-commission">
+                                            <span class="commission-value">3%</span>
+                                            <span class="commission-label">del cupón</span>
+                                        </div>
+                                        <div class="level-nodes">
+                                            <div class="tree-node">
+                                                <div class="node-icon small">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="tree-node">
+                                                <div class="node-icon small">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="tree-node">
+                                                <div class="node-icon small">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Nivel 5 -->
+                                <div class="tree-level level-5 carousel-slide">
+                                    <div class="level-card">
+                                        <div class="level-header">
+                                            <span class="level-number">5</span>
+                                            <span class="level-name">Quinta Generación</span>
+                                        </div>
+                                        <div class="level-commission">
+                                            <span class="commission-value">2%</span>
+                                            <span class="commission-label">del cupón</span>
+                                        </div>
+                                        <div class="level-nodes">
+                                            <div class="tree-node">
+                                                <div class="node-icon small">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="tree-node">
+                                                <div class="node-icon small">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="tree-node">
+                                                <div class="node-icon small">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="carousel-btn next-btn" id="consumoNextBtn" aria-label="Siguiente nivel">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                        
+                        <!-- Indicadores -->
+                        <div class="carousel-indicators">
+                            <button class="indicator active" data-slide="0" aria-label="Ir a nivel 0"></button>
+                            <button class="indicator" data-slide="1" aria-label="Ir a nivel 1"></button>
+                            <button class="indicator" data-slide="2" aria-label="Ir a nivel 2"></button>
+                            <button class="indicator" data-slide="3" aria-label="Ir a nivel 3"></button>
+                            <button class="indicator" data-slide="4" aria-label="Ir a nivel 4"></button>
+                            <button class="indicator" data-slide="5" aria-label="Ir a nivel 5"></button>
+                        </div>
+                    </div>
+
+                    <!-- Total Acumulado de Consumo -->
+                    <div class="rewards-total">
+                        <div class="total-card">
+                            <div class="total-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <h3>Total acumulado</h3>
+                            <p class="total-percentage">65%</p>
+                            <p class="total-description">Porcentaje total que se destina en la organización</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Plan de Consumo -->
+
+            <!-- Calculadora Financiera -->
+            <div class="rewards-calculator">
+                <div class="calculator-header">
+                    <h3>🧮 Calculadora de Ingresos Potenciales</h3>
+                    <p class="calculator-subtitle">Simula diferentes escenarios basados en la actividad de tu red</p>
+                </div>
+
+                <div class="calculator-body">
+                    <!-- Inputs -->
+                    <div class="calculator-inputs">
+                        <div class="input-group">
+                            <div class="input-label">
+                                <label for="inviteCount">Personas que invito directamente</label>
+                                <button class="tooltip-btn" data-tooltip="Número de personas que invitas a tu primer nivel" aria-label="Información">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="input-control">
+                                <input type="range" id="inviteCount" min="1" max="50" value="10" class="slider">
+                                <input type="number" id="inviteCountValue" min="1" max="50" value="10" class="number-input">
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-label">
+                                <label for="monthlyConsumption">Consumo mensual por persona (USD)</label>
+                                <button class="tooltip-btn" data-tooltip="Estimación del gasto mensual promedio en comercios afiliados" aria-label="Información">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="input-control">
+                                <input type="range" id="monthlyConsumption" min="10" max="5000" step="10" value="100" class="slider">
+                                <input type="number" id="monthlyConsumptionValue" min="10" max="5000" step="10" value="100" class="number-input">
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-label">
+                                <label for="poolPercentage">Pool del comercio (%)</label>
+                                <button class="tooltip-btn" data-tooltip="Porcentaje del consumo que el comercio destina al pool de comisiones" aria-label="Información">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="input-control">
+                                <input type="number" id="poolPercentage" min="1" max="30" step="0.5" value="10" class="number-input-full">
+                                <span class="input-suffix">%</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="toggle-group">
+                                <label class="toggle-label">
+                                    <input type="checkbox" id="includePersonalConsumption" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                                <span class="toggle-text">Incluir mi consumo personal</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resultados Destacados -->
+                    <div class="calculator-results">
+                        <div class="result-highlight-grid">
+                            <div class="result-highlight">
+                                <div class="result-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <div class="result-content">
+                                    <span class="result-label">Total personas en red</span>
+                                    <span class="result-value" id="totalPeople">0</span>
+                                </div>
+                            </div>
+
+                            <div class="result-highlight">
+                                <div class="result-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <div class="result-content">
+                                    <span class="result-label">Ingreso mensual estimado</span>
+                                    <span class="result-value" id="totalMonthly">$0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tabla de Resultados -->
+                    <div class="calculator-table-wrapper">
+                        <table class="calculator-table">
+                            <thead>
+                                <tr>
+                                    <th>Nivel</th>
+                                    <th>Personas</th>
+                                    <th>Publicidad (mensual)</th>
+                                    <th>Consumo (mensual)</th>
+                                    <th>Total mensual</th>
+                                </tr>
+                            </thead>
+                            <tbody id="calculatorTableBody">
+                                <!-- Se llena dinámicamente -->
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2"><strong>Totales</strong></td>
+                                    <td id="totalReferralAnnual">$0</td>
+                                    <td id="totalConsumptionMonthly">$0</td>
+                                    <td id="totalMonthlyFooter">$0</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <!-- Disclaimer -->
+                    <div class="calculator-disclaimer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="currentColor"/>
+                        </svg>
+                        <p>Los resultados mostrados son escenarios ilustrativos y dependen de la actividad real de tu red. LinkUp no garantiza ingresos específicos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         SECCIÓN 6: CTA FUERTE
     ========================= -->
     <section class="cta-strong" id="cta">
         <div class="container">
@@ -382,7 +1032,7 @@
     </section>
 
     <!-- =========================
-         SECCIÓN 6: SOBRE NOSOTROS (SER)
+         SECCIÓN 7: SOBRE NOSOTROS (SER)
     ========================= -->
     <section class="about" id="nosotros">
         <div class="container">
@@ -425,7 +1075,7 @@
     </section>
 
     <!-- =========================
-         SECCIÓN 7: FAQs
+         SECCIÓN 8: FAQs
     ========================= -->
     <section class="faqs" id="faqs">
         <div class="container">
@@ -484,7 +1134,7 @@
     </section>
 
     <!-- =========================
-         SECCIÓN 8: FOOTER
+         SECCIÓN 9: FOOTER
     ========================= -->
     <footer class="footer">
         <div class="container">
