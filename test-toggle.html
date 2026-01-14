@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Toggle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+        .buttons {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .content {
+            border: 2px solid #ccc;
+            padding: 20px;
+            margin: 10px 0;
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test de Toggle</h1>
+    
+    <div class="buttons">
+        <button class="rewards-toggle-btn active" data-plan="recomendacion">Plan de Recomendación</button>
+        <button class="rewards-toggle-btn" data-plan="consumo">Plan de Consumo</button>
+    </div>
+    
+    <div class="content" id="plan-recomendacion-content" style="background: lightblue;">
+        <h2>Plan de Recomendación</h2>
+        <p>Este es el contenido del plan de recomendación.</p>
+    </div>
+    
+    <div class="content" id="plan-consumo-content" style="display: none; background: lightgreen;">
+        <h2>Plan de Consumo</h2>
+        <p>Este es el contenido del plan de consumo.</p>
+    </div>
+
+    <script>
+        const toggleButtons = document.querySelectorAll('.rewards-toggle-btn');
+        const planRecomendacion = document.getElementById('plan-recomendacion-content');
+        const planConsumo = document.getElementById('plan-consumo-content');
+        
+        console.log('toggleButtons:', toggleButtons);
+        console.log('planRecomendacion:', planRecomendacion);
+        console.log('planConsumo:', planConsumo);
+
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const planType = this.getAttribute('data-plan');
+                console.log('Clicked:', planType);
+                
+                toggleButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                if (planType === 'recomendacion') {
+                    planRecomendacion.style.display = 'block';
+                    planConsumo.style.display = 'none';
+                    console.log('Mostrando recomendación');
+                } else if (planType === 'consumo') {
+                    planRecomendacion.style.display = 'none';
+                    planConsumo.style.display = 'block';
+                    console.log('Mostrando consumo');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

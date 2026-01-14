@@ -679,10 +679,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const toggleButtons = document.querySelectorAll('.rewards-toggle-btn');
     const planRecomendacion = document.getElementById('plan-recomendacion-content');
     const planConsumo = document.getElementById('plan-consumo-content');
+    
+    let consumoCarouselInitialized = false;
+    
+    console.log('Inicializando alternancia de planes...');
 
     toggleButtons.forEach(button => {
         button.addEventListener('click', function() {
             const planType = this.getAttribute('data-plan');
+            console.log('Click en botón:', planType);
             
             // Remover clase active de todos los botones
             toggleButtons.forEach(btn => btn.classList.remove('active'));
@@ -692,17 +697,40 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Mostrar/ocultar contenido correspondiente
             if (planType === 'recomendacion') {
-                planRecomendacion.style.display = 'block';
-                planConsumo.style.display = 'none';
+                if (planConsumo) {
+                    planConsumo.style.display = 'none';
+                }
+                if (planRecomendacion) {
+                    planRecomendacion.style.display = 'block';
+                }
+                console.log('Mostrando Plan de Recomendación');
             } else if (planType === 'consumo') {
-                planRecomendacion.style.display = 'none';
-                planConsumo.style.display = 'block';
+                if (planRecomendacion) {
+                    planRecomendacion.style.display = 'none';
+                }
+                if (planConsumo) {
+                    planConsumo.style.display = 'block';
+                    
+                    // Inicializar el carousel SOLO la primera vez que se muestra
+                    if (!consumoCarouselInitialized) {
+                        setTimeout(() => {
+                            initConsumoCarousel();
+                            consumoCarouselInitialized = true;
+                            console.log('Carousel de consumo inicializado');
+                        }, 50);
+                    }
+                }
+                console.log('Mostrando Plan de Consumo');
             }
         });
     });
     
-    // Inicializar carousel del Plan de Consumo
-    initConsumoCarousel();
+    // Asegurarse de que el Plan de Recomendación esté visible al inicio
+    if (planRecomendacion && planConsumo) {
+        planRecomendacion.style.display = 'block';
+        planConsumo.style.display = 'none';
+        console.log('Estado inicial configurado');
+    }
 });
 
 // ========================================

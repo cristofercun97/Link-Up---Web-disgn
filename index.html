@@ -6,6 +6,9 @@
     <meta name="description" content="LINK UP - Ahorra con cupones de descuento y construye una red que genera ingresos compartiendo lo que te gusta.">
     <title>LINK UP - Ahorra y Gana Compartiendo</title>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo-ofcweb.png">
+    
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
@@ -397,8 +400,8 @@
             <!-- Plan de Recomendación -->
             <div class="rewards-content" id="plan-recomendacion-content">
                 <div class="rewards-visual">
-                <!-- Carrusel de Niveles -->
-                <div class="rewards-carousel">
+                    <!-- Carrusel de Niveles -->
+                    <div class="rewards-carousel">
                     <button class="carousel-btn prev-btn" id="rewardsPrevBtn" aria-label="Nivel anterior">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor"/>
@@ -1237,5 +1240,23 @@
 
     <!-- Scripts -->
     <script src="script.js"></script>
+    
+    <!-- Script de Debug Temporal -->
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const planRec = document.getElementById('plan-recomendacion-content');
+                const planCons = document.getElementById('plan-consumo-content');
+                const buttons = document.querySelectorAll('.rewards-toggle-btn');
+                
+                console.log('=== DEBUG PLAN DE RECOMPENSAS ===');
+                console.log('Plan Recomendación encontrado:', planRec);
+                console.log('Plan Consumo encontrado:', planCons);
+                console.log('Botones encontrados:', buttons.length);
+                console.log('Display Plan Recomendación:', planRec ? window.getComputedStyle(planRec).display : 'null');
+                console.log('Display Plan Consumo:', planCons ? window.getComputedStyle(planCons).display : 'null');
+            }, 1000);
+        });
+    </script>
 </body>
 </html>

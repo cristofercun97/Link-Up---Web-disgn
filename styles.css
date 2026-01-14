@@ -1098,10 +1098,12 @@ strong {
     padding: var(--spacing-md);
     opacity: 0;
     transition: opacity 0.5s ease;
+    pointer-events: none;
 }
 
 .carousel-slide.active {
-    opacity: 1;
+    opacity: 1 !important;
+    pointer-events: auto;
 }
 
 .tree-level {
