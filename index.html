@@ -1150,8 +1150,8 @@
                 <div class="footer-section">
                     <h5>Legal</h5>
                     <ul>
-                        <li><a href="#terminos">Términos y condiciones</a></li>
-                        <li><a href="#privacidad">Política de privacidad</a></li>
+                        <li><a href="#" id="openTerms" class="modal-link">Términos y condiciones</a></li>
+                        <li><a href="#" id="openPrivacy" class="modal-link">Política de privacidad</a></li>
                         <li><a href="#cookies">Política de cookies</a></li>
                     </ul>
                 </div>
@@ -1234,6 +1234,314 @@
                         <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"/>
                     </svg>
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Términos y Condiciones -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📄 TÉRMINOS Y CONDICIONES DE USO – LINKUP</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="terms-logo">
+                    <img src="img/logo-ofcweb.png" alt="LinkUp Logo" width="80">
+                </div>
+                
+                <div class="terms-intro">
+                    <p><strong>Bienvenido a LinkUp.</strong></p>
+                    <p>Al acceder, registrarse o utilizar la plataforma LinkUp, el usuario acepta los presentes Términos y Condiciones, así como las políticas complementarias que se indiquen.</p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>1. DEFINICIONES</h3>
+                    <ul>
+                        <li><strong>LinkUp:</strong> Plataforma digital de recomendación basada en consumo real.</li>
+                        <li><strong>Usuario:</strong> Persona natural que se registra en la plataforma.</li>
+                        <li><strong>Comercio:</strong> Negocio afiliado que ofrece beneficios a través de LinkUp.</li>
+                        <li><strong>Beneficios:</strong> Incentivos económicos o descuentos generados por consumo o recomendación.</li>
+                        <li><strong>Plataforma:</strong> Aplicación móvil, web o sistemas asociados a LinkUp.</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>2. OBJETO DE LINKUP</h3>
+                    <p>LinkUp es una plataforma que facilita la recomendación de comercios y la participación en beneficios, basados exclusivamente en:</p>
+                    <ul>
+                        <li>Consumo real en comercios afiliados</li>
+                        <li>Recomendaciones efectivas y verificables</li>
+                    </ul>
+                    <p><strong>LinkUp no garantiza ingresos, ni resultados económicos específicos.</strong></p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>3. REGISTRO DE USUARIOS</h3>
+                    <p>3.1. El usuario debe proporcionar información veraz y actualizada.</p>
+                    <p>3.2. Cada usuario es responsable de la confidencialidad de su cuenta.</p>
+                    <p>3.3. LinkUp se reserva el derecho de suspender cuentas con información falsa o uso indebido.</p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>4. MODELO DE BENEFICIOS (IMPORTANTE)</h3>
+                    <p>4.1. Los beneficios mostrados en la plataforma son referenciales e ilustrativos.</p>
+                    <p>4.2. Los ingresos dependen de:</p>
+                    <ul>
+                        <li>Actividad real del usuario</li>
+                        <li>Consumo efectivo en comercios</li>
+                        <li>Participación activa de la comunidad</li>
+                        <li>Disponibilidad de comercios afiliados</li>
+                    </ul>
+                    <p><strong>4.3. No existen ingresos garantizados.</strong></p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>5. BENEFICIOS POR RECOMENDACIÓN</h3>
+                    <p>5.1. La plataforma puede otorgar beneficios por la recomendación de nuevos usuarios.</p>
+                    <p>5.2. Dichos beneficios se distribuyen según reglas internas vigentes al momento de la operación.</p>
+                    <p>5.3. La compra de la cuponera digital no garantiza beneficios económicos.</p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>6. BENEFICIOS POR CONSUMO</h3>
+                    <p>6.1. Los beneficios por consumo se generan únicamente cuando:</p>
+                    <ul>
+                        <li>Existe una compra real</li>
+                        <li>El comercio confirma la transacción</li>
+                    </ul>
+                    <p>6.2. LinkUp puede retener un porcentaje del beneficio para:</p>
+                    <ul>
+                        <li>Operación</li>
+                        <li>Soporte</li>
+                        <li>Sostenibilidad del sistema</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>7. COMPORTAMIENTOS PROHIBIDOS</h3>
+                    <p>Está estrictamente prohibido:</p>
+                    <ul>
+                        <li>Simular consumos o transacciones</li>
+                        <li>Crear cuentas falsas</li>
+                        <li>Manipular el sistema de recomendaciones</li>
+                        <li>Realizar actividades fraudulentas</li>
+                    </ul>
+                    <p><strong>LinkUp podrá suspender o cancelar cuentas sin previo aviso en estos casos.</strong></p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>8. COMERCIOS AFILIADOS</h3>
+                    <p>8.1. Los comercios deciden voluntariamente su participación.</p>
+                    <p>8.2. LinkUp no es responsable por:</p>
+                    <ul>
+                        <li>Calidad de productos o servicios del comercio</li>
+                        <li>Incumplimientos del comercio hacia el usuario</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>9. PAGOS Y RETIROS</h3>
+                    <p>9.1. Los beneficios pueden acumularse como saldo dentro de la plataforma.</p>
+                    <p>9.2. Los métodos, montos mínimos y tiempos de retiro serán definidos por LinkUp.</p>
+                    <p>9.3. LinkUp puede modificar estos parámetros con previo aviso.</p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>10. LIMITACIÓN DE RESPONSABILIDAD</h3>
+                    <p>LinkUp no será responsable por:</p>
+                    <ul>
+                        <li>Pérdidas económicas</li>
+                        <li>Expectativas no cumplidas</li>
+                        <li>Interrupciones del servicio</li>
+                        <li>Cambios en el modelo de beneficios</li>
+                    </ul>
+                    <p><strong>El uso de la plataforma es bajo responsabilidad del usuario.</strong></p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>11. MODIFICACIONES</h3>
+                    <p>LinkUp se reserva el derecho de:</p>
+                    <ul>
+                        <li>Modificar estos Términos</li>
+                        <li>Ajustar reglas del sistema</li>
+                        <li>Actualizar porcentajes y condiciones</li>
+                    </ul>
+                    <p>Las modificaciones entrarán en vigor desde su publicación.</p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>12. TERMINACIÓN DE CUENTA</h3>
+                    <p>12.1. El usuario puede cancelar su cuenta en cualquier momento.</p>
+                    <p>12.2. LinkUp puede suspender o cerrar cuentas que incumplan estos Términos.</p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>13. PROPIEDAD INTELECTUAL</h3>
+                    <p>Todo el contenido, marca, diseño y tecnología de LinkUp son propiedad exclusiva de la plataforma y no pueden ser utilizados sin autorización.</p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>14. LEY APLICABLE</h3>
+                    <p>Estos Términos se rigen por las leyes del país donde opere LinkUp.</p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>15. ACEPTACIÓN</h3>
+                    <p><strong>El uso de la plataforma implica la aceptación total de estos Términos y Condiciones.</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Política de Privacidad -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🔐 POLÍTICA DE PRIVACIDAD – LINKUP</h2>
+                <span class="close-modal" data-modal="privacy">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="terms-logo">
+                    <img src="img/logo-ofcweb.png" alt="LinkUp Logo" width="80">
+                </div>
+                
+                <div class="terms-intro">
+                    <p>En LinkUp, valoramos y respetamos la privacidad de nuestros usuarios.</p>
+                    <p>La presente Política de Privacidad describe cómo recopilamos, usamos, protegemos y tratamos la información personal de las personas que utilizan nuestra plataforma.</p>
+                    <p><strong>Al registrarse o utilizar LinkUp, el usuario acepta esta Política de Privacidad.</strong></p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>1. RESPONSABLE DEL TRATAMIENTO</h3>
+                    <p>LinkUp es responsable del tratamiento de los datos personales recopilados a través de su plataforma digital (aplicación móvil, sitio web y sistemas asociados).</p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>2. INFORMACIÓN QUE RECOPILAMOS</h3>
+                    <p>LinkUp puede recopilar los siguientes tipos de información:</p>
+                    <h4 style="margin-top: 1rem; margin-bottom: 0.5rem; color: var(--color-primary); font-size: 1.05rem;">2.1. Información proporcionada por el usuario</h4>
+                    <ul>
+                        <li>Nombre y apellidos</li>
+                        <li>Correo electrónico</li>
+                        <li>Número de teléfono</li>
+                        <li>Datos de registro y autenticación</li>
+                        <li>Información necesaria para el uso de la plataforma</li>
+                    </ul>
+                    <h4 style="margin-top: 1rem; margin-bottom: 0.5rem; color: var(--color-primary); font-size: 1.05rem;">2.2. Información de uso</h4>
+                    <ul>
+                        <li>Historial de consumo en comercios afiliados</li>
+                        <li>Recomendaciones realizadas</li>
+                        <li>Actividad dentro de la plataforma</li>
+                        <li>Datos de transacciones confirmadas</li>
+                    </ul>
+                    <h4 style="margin-top: 1rem; margin-bottom: 0.5rem; color: var(--color-primary); font-size: 1.05rem;">2.3. Información técnica</h4>
+                    <ul>
+                        <li>Dirección IP</li>
+                        <li>Tipo de dispositivo</li>
+                        <li>Sistema operativo</li>
+                        <li>Datos de navegación y uso de la aplicación</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>3. FINALIDAD DEL USO DE LA INFORMACIÓN</h3>
+                    <p>Los datos personales recopilados se utilizan para:</p>
+                    <ul>
+                        <li>Proporcionar y operar los servicios de LinkUp</li>
+                        <li>Gestionar cuentas de usuarios</li>
+                        <li>Registrar y validar consumos y recomendaciones</li>
+                        <li>Calcular y mostrar beneficios dentro de la plataforma</li>
+                        <li>Mejorar la experiencia del usuario</li>
+                        <li>Enviar comunicaciones relacionadas con el servicio</li>
+                        <li>Cumplir obligaciones legales y de seguridad</li>
+                    </ul>
+                    <p><strong>LinkUp no utiliza los datos para fines distintos a los aquí descritos.</strong></p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>4. BASE LEGAL DEL TRATAMIENTO</h3>
+                    <p>El tratamiento de los datos personales se basa en:</p>
+                    <ul>
+                        <li>El consentimiento del usuario</li>
+                        <li>La ejecución del servicio solicitado</li>
+                        <li>El cumplimiento de obligaciones legales</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>5. COMPARTICIÓN DE INFORMACIÓN</h3>
+                    <p><strong>LinkUp no vende ni alquila datos personales a terceros.</strong></p>
+                    <p>La información podrá compartirse únicamente con:</p>
+                    <ul>
+                        <li>Comercios afiliados, solo para validar consumos reales</li>
+                        <li>Proveedores tecnológicos necesarios para el funcionamiento del servicio</li>
+                        <li>Autoridades competentes, cuando sea requerido por ley</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>6. SEGURIDAD DE LA INFORMACIÓN</h3>
+                    <p>LinkUp adopta medidas técnicas y organizativas razonables para proteger la información personal, incluyendo:</p>
+                    <ul>
+                        <li>Acceso restringido a los datos</li>
+                        <li>Protocolos de seguridad</li>
+                        <li>Protección contra accesos no autorizados</li>
+                    </ul>
+                    <p>No obstante, el usuario reconoce que ningún sistema es completamente infalible.</p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>7. CONSERVACIÓN DE LOS DATOS</h3>
+                    <p>Los datos personales se conservarán únicamente durante el tiempo necesario para:</p>
+                    <ul>
+                        <li>Cumplir las finalidades del servicio</li>
+                        <li>Atender obligaciones legales</li>
+                        <li>Resolver disputas o reclamaciones</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>8. DERECHOS DEL USUARIO</h3>
+                    <p>El usuario tiene derecho a:</p>
+                    <ul>
+                        <li>Acceder a sus datos personales</li>
+                        <li>Solicitar la corrección de información inexacta</li>
+                        <li>Solicitar la eliminación de sus datos</li>
+                        <li>Limitar u oponerse al tratamiento de sus datos</li>
+                    </ul>
+                    <p>Las solicitudes pueden realizarse a través de los canales oficiales de LinkUp.</p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>9. USO DE COOKIES (SI APLICA)</h3>
+                    <p>LinkUp puede utilizar cookies o tecnologías similares para mejorar la experiencia del usuario y analizar el uso de la plataforma.</p>
+                    <p>El usuario puede configurar su navegador para rechazar cookies, aunque esto puede afectar algunas funcionalidades.</p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>10. MENORES DE EDAD</h3>
+                    <p><strong>LinkUp no está dirigido a menores de edad.</strong></p>
+                    <p>No recopilamos intencionalmente datos de menores.</p>
+                    <p>Si se detecta información de un menor, será eliminada.</p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>11. MODIFICACIONES A LA POLÍTICA DE PRIVACIDAD</h3>
+                    <p>LinkUp se reserva el derecho de modificar esta Política de Privacidad en cualquier momento.</p>
+                    <p>Las modificaciones serán publicadas en la plataforma y entrarán en vigor desde su publicación.</p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>12. CONTACTO</h3>
+                    <p>Para consultas relacionadas con esta Política de Privacidad o el tratamiento de datos personales, el usuario puede contactarnos a través de:</p>
+                    <p>📧 info@linkup.community</p>
+                </div>
+
+                <div class="terms-section-item">
+                    <h3>13. ACEPTACIÓN</h3>
+                    <p><strong>El uso de la plataforma implica la aceptación expresa de esta Política de Privacidad.</strong></p>
+                </div>
             </div>
         </div>
     </div>

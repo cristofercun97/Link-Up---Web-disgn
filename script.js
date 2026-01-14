@@ -790,3 +790,67 @@ function initConsumoCarousel() {
         });
     });
 }
+
+// ========================================
+// MODALES (TÉRMINOS Y PRIVACIDAD)
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const openTermsBtn = document.getElementById('openTerms');
+    const openPrivacyBtn = document.getElementById('openPrivacy');
+    const termsModal = document.getElementById('termsModal');
+    const privacyModal = document.getElementById('privacyModal');
+    const closeButtons = document.querySelectorAll('.close-modal');
+
+    // Abrir modal de términos
+    if (openTermsBtn) {
+        openTermsBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            termsModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    // Abrir modal de privacidad
+    if (openPrivacyBtn) {
+        openPrivacyBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            privacyModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    // Cerrar modales con la X
+    closeButtons.forEach(function(closeBtn) {
+        closeBtn.addEventListener('click', function() {
+            termsModal.classList.remove('active');
+            privacyModal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Cerrar modales al hacer click fuera del contenido
+    [termsModal, privacyModal].forEach(function(modal) {
+        if (modal) {
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+    });
+
+    // Cerrar modales con la tecla ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            if (termsModal.classList.contains('active')) {
+                termsModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            if (privacyModal.classList.contains('active')) {
+                privacyModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+    });
+});
