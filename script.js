@@ -801,23 +801,55 @@ document.addEventListener('DOMContentLoaded', function() {
     const privacyModal = document.getElementById('privacyModal');
     const closeButtons = document.querySelectorAll('.close-modal');
 
-    // Abrir modal de términos
+    // Función para abrir el modal de términos
+    function openTermsModal() {
+        if (termsModal) {
+            termsModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    // Función para abrir el modal de privacidad
+    function openPrivacyModal() {
+        if (privacyModal) {
+            privacyModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    // Abrir modal de términos con botón
     if (openTermsBtn) {
         openTermsBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            termsModal.classList.add('active');
-            document.body.style.overflow = 'hidden';
+            openTermsModal();
         });
     }
 
-    // Abrir modal de privacidad
+    // Abrir modal de privacidad con botón
     if (openPrivacyBtn) {
         openPrivacyBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            privacyModal.classList.add('active');
-            document.body.style.overflow = 'hidden';
+            openPrivacyModal();
         });
     }
+
+    // Detectar si la URL tiene hash para abrir modal directamente
+    function checkHashOnLoad() {
+        const hash = window.location.hash;
+        if (hash === '#terminos' || hash === '#terminos-condiciones') {
+            openTermsModal();
+        } else if (hash === '#privacidad' || hash === '#politica-privacidad') {
+            openPrivacyModal();
+        }
+    }
+
+    // Verificar hash al cargar la página
+    checkHashOnLoad();
+
+    // Verificar hash cuando cambie (para enlaces compartidos)
+    window.addEventListener('hashchange', function() {
+        checkHashOnLoad();
+    });
 
     // Cerrar modales con la X
     closeButtons.forEach(function(closeBtn) {
