@@ -681,8 +681,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const planConsumo = document.getElementById('plan-consumo-content');
     const btnPresentation = document.getElementById('btnPresentation');
     
-    let consumoCarouselInitialized = false;
-    
     // Enlaces para cada plan
     const presentationLinks = {
         recomendacion: 'https://drive.google.com/file/d/1sYZUry6KVIThZvIeqysuYZawIs1VcQ8l/view?usp=sharing',
@@ -690,6 +688,10 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     console.log('Inicializando alternancia de planes...');
+    
+    // Inicializar el carrusel de consumo inmediatamente al cargar la página
+    initConsumoCarousel();
+    console.log('Carousel de consumo inicializado al cargar');
 
     toggleButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -723,15 +725,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 if (planConsumo) {
                     planConsumo.style.display = 'block';
-                    
-                    // Inicializar el carousel SOLO la primera vez que se muestra
-                    if (!consumoCarouselInitialized) {
-                        setTimeout(() => {
-                            initConsumoCarousel();
-                            consumoCarouselInitialized = true;
-                            console.log('Carousel de consumo inicializado');
-                        }, 50);
-                    }
                 }
                 console.log('Mostrando Plan de Consumo');
             }
@@ -782,6 +775,9 @@ function initConsumoCarousel() {
         const offset = -currentIndex * 100;
         track.style.transform = `translateX(${offset}%)`;
     }
+    
+    // Inicializar el carrusel mostrando el primer slide
+    updateCarousel();
     
     // Botón siguiente
     nextBtn.addEventListener('click', () => {
