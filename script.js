@@ -679,8 +679,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const toggleButtons = document.querySelectorAll('.rewards-toggle-btn');
     const planRecomendacion = document.getElementById('plan-recomendacion-content');
     const planConsumo = document.getElementById('plan-consumo-content');
+    const btnPresentation = document.getElementById('btnPresentation');
     
     let consumoCarouselInitialized = false;
+    
+    // Enlaces para cada plan
+    const presentationLinks = {
+        recomendacion: 'https://drive.google.com/file/d/1sYZUry6KVIThZvIeqysuYZawIs1VcQ8l/view?usp=sharing',
+        consumo: 'https://drive.google.com/file/d/1sGsmGbSisii6zAg8u12ul6tHRe0DzrH8/view?usp=sharing'
+    };
     
     console.log('Inicializando alternancia de planes...');
 
@@ -694,6 +701,12 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Agregar clase active al botón clickeado
             this.classList.add('active');
+            
+            // Cambiar el enlace del botón de presentación
+            if (btnPresentation && presentationLinks[planType]) {
+                btnPresentation.href = presentationLinks[planType];
+                console.log('Enlace actualizado a:', presentationLinks[planType]);
+            }
             
             // Mostrar/ocultar contenido correspondiente
             if (planType === 'recomendacion') {

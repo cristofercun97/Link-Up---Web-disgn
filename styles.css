@@ -1133,6 +1133,45 @@ strong {
     opacity: 1;
 }
 
+/* Botón Ver Presentación */
+.rewards-presentation-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-lg);
+}
+
+.btn-presentation {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #ffbd59 0%, #ffde59 100%);
+    color: #333;
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 2px solid rgba(255, 189, 89, 0.3);
+    box-shadow: 0 4px 16px rgba(255, 189, 89, 0.4);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-presentation:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 24px rgba(255, 189, 89, 0.5);
+    background: linear-gradient(135deg, #ffde59 0%, #ffbd59 100%);
+}
+
+.btn-presentation svg {
+    transition: transform 0.3s ease;
+}
+
+.btn-presentation:hover svg {
+    transform: scale(1.1);
+}
+
 /* Contenedores de planes */
 .rewards-content {
     animation: fadeIn 0.5s ease;
@@ -1826,6 +1865,20 @@ strong {
     .rewards-plan {
         padding: var(--spacing-xl) 0;
     }
+    
+    .rewards-toggle-buttons {
+        gap: 0.75rem;
+    }
+    
+    .rewards-toggle-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .btn-presentation {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+    }
 
     .rewards-carousel {
         padding: 0 40px;
@@ -1890,6 +1943,27 @@ strong {
 }
 
 @media (max-width: 480px) {
+    .rewards-toggle-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0 1rem;
+    }
+    
+    .rewards-toggle-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .btn-presentation {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+        width: calc(100% - 2rem);
+        max-width: 280px;
+        justify-content: center;
+    }
+    
     .rewards-carousel {
         padding: 0 35px;
     }
