@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initFAQAccordion();
     initHeroCoupons();
     initChat();
+    initBenefitsDragScroll();
+    initTestimonialsDragScroll();
 });
 
 // ========================================
@@ -188,14 +190,39 @@ function animateCount(element) {
 }
 
 // ========================================
+// ========================================
+// BENEFITS HORIZONTAL DRAG SCROLL
+// ========================================
+function initBenefitsDragScroll() {
+    initDragScroll(document.querySelector('.benefits-scroll-wrapper'));
+}
+
+function initTestimonialsDragScroll() {
+    initDragScroll(document.querySelector('.testimonials-scroll-wrapper'));
+}
+
+function initDragScroll(wrapper) {
+    if (!wrapper) return;
+    let isDown = false, startX, scrollLeft;
+    wrapper.addEventListener('mousedown', (e) => { isDown = true; startX = e.pageX - wrapper.offsetLeft; scrollLeft = wrapper.scrollLeft; });
+    wrapper.addEventListener('mouseleave', () => { isDown = false; });
+    wrapper.addEventListener('mouseup',    () => { isDown = false; });
+    wrapper.addEventListener('mousemove',  (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        wrapper.scrollLeft = scrollLeft - (e.pageX - wrapper.offsetLeft - startX) * 1.5;
+    });
+}
+
+// ========================================
 // FLOATING COUPONS IN HERO
 // ========================================
 function initHeroCoupons() {
     const container = document.getElementById('heroCoupons');
     if (!container) return;
     
-    const couponCount = 27;
-    const sizes = ['xxl', 'xl', 'lg', 'md', 'sm', 'xs'];
+    const couponCount = 10;
+    const sizes = ['lg', 'md', 'sm', 'xs'];
     const positions = ['float-left', 'float-center-left', 'float-center', 'float-center-right', 'float-right'];
     const colors = [
         { primary: '#FF6B6B', secondary: '#FF8787' },
@@ -211,7 +238,7 @@ function initHeroCoupons() {
     for (let i = 0; i < couponCount; i++) {
         setTimeout(() => {
             createFloatingCoupon(container, sizes, positions, colors);
-        }, i * 800);
+        }, i * 3000);
     }
 }
 
@@ -222,8 +249,8 @@ function createFloatingCoupon(container, sizes, positions, colors) {
     const size = sizes[Math.floor(Math.random() * sizes.length)];
     const position = positions[Math.floor(Math.random() * positions.length)];
     const color = colors[Math.floor(Math.random() * colors.length)];
-    const duration = 15 + Math.random() * 10;
-    const delay = Math.random() * 5;
+    const duration = 22 + Math.random() * 10;
+    const delay = Math.random() * 2;
     
     coupon.classList.add('size-' + size);
     coupon.classList.add(position);
