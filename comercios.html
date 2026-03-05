@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Únete a la red de comercios LinkUp. Más clientes, más ventas, sin pagar publicidad tradicional.">
+    <title>Para Comercios - LINK UP</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="comercios-styles.css">
+</head>
+<body>
+
+    <!-- =========================
+         SECCIÓN 1: NAVBAR
+    ========================= -->
+    <header class="navbar" id="navbar">
+        <nav class="navbar-container">
+            <div class="navbar-logo">
+                <img src="https://www.linkup.community/img/logo-ofcweb.png" alt="LINK UP" class="logo-img">
+            </div>
+            
+            <div class="navbar-menu" id="navbarMenu">
+                <a href="#beneficios" class="nav-link">Beneficios</a>
+                <a href="#como-funciona" class="nav-link">Cómo funciona</a>
+                <a href="#estadisticas" class="nav-link">Estadísticas</a>
+                <a href="#faqs" class="nav-link">FAQs</a>
+            </div>
+            
+            <a href="https://link-up-mlm-2025-merchants.web.app/merchant/onboarding" target="_blank" rel="noopener noreferrer" class="btn-nav-cta">Registrar mi comercio</a>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menú">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu Drawer -->
+        <div class="mobile-drawer" id="mobileDrawer">
+            <div class="mobile-drawer-header">
+                <img src="https://www.linkup.community/img/logo-ofcweb.png" alt="LINK UP" class="mobile-logo">
+                <button class="close-drawer" id="closeDrawer" aria-label="Cerrar menú">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+            <nav class="mobile-nav-links">
+                <a href="#beneficios" class="mobile-nav-link">Beneficios</a>
+                <a href="#como-funciona" class="mobile-nav-link">Cómo funciona</a>
+                <a href="#estadisticas" class="mobile-nav-link">Estadísticas</a>
+                <a href="#faqs" class="mobile-nav-link">FAQs</a>
+            </nav>
+            <div class="mobile-drawer-footer">
+                <a href="https://link-up-mlm-2025-merchants.web.app/merchant/onboarding" target="_blank" rel="noopener noreferrer" class="btn-mobile-cta">Registrar mi comercio</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========================
+             SECCIÓN 2: HERO
+        ========================= -->
+        <section class="hero" id="inicio">
+            <div class="hero-glow"></div>
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="badge">
+                            <span class="badge-icon">🏪</span>
+                            <span class="badge-text">Para Comercios — LinkUp</span>
+                        </div>
+                        
+                        <h1 class="hero-title">
+                            Más clientes,<br>
+                            más ventas,<br>
+                            <span class="gradient-text">sin pagar publicidad</span>
+                        </h1>
+                        
+                        <p class="hero-subtitle">
+                            Únete a la red de comercios LinkUp y llega a miles de afiliados activos que 
+                            buscan cupones reales todos los días. Tú defines el descuento, nosotros 
+                            traemos los clientes.
+                        </p>
+                        
+                        <div class="hero-ctas">
+                            <a href="https://link-up-mlm-2025-merchants.web.app/merchant/onboarding" target="_blank" rel="noopener noreferrer" class="btn-primary">Registrar mi comercio</a>
+                            <a href="#como-funciona" class="btn-secondary">Ver cómo funciona</a>
+                        </div>
+                        
+                        <div class="hero-indicators">
+                            <span class="indicator-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                                </svg>
+                                Sin costo inicial
+                            </span>
+                            <span class="indicator-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                                </svg>
+                                Alta en 48hs
+                            </span>
+                            <span class="indicator-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                                </svg>
+                                Control total
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual">
+                        <div class="hero-stats-panel">
+                            <div class="hero-stat-card">
+                                <span class="hero-stat-icon">💰</span>
+                                <div class="hero-stat-body">
+                                    <span class="hero-stat-value">0%</span>
+                                    <span class="hero-stat-label">Costo inicial para unirte</span>
+                                </div>
+                            </div>
+                            <div class="hero-stat-card">
+                                <span class="hero-stat-icon">⚡</span>
+                                <div class="hero-stat-body">
+                                    <span class="hero-stat-value">48hs</span>
+                                    <span class="hero-stat-label">Activación rápida</span>
+                                </div>
+                            </div>
+                            <div class="hero-stat-card">
+                                <span class="hero-stat-icon">📈</span>
+                                <div class="hero-stat-body">
+                                    <span class="hero-stat-value">+40%</span>
+                                    <span class="hero-stat-label">Más clientes promedio</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Floating Coupons -->
+                <div class="hero-coupons" id="heroCoupons"></div>
+            </div>
+        </section>
+
+        <!-- =========================
+             SECCIÓN 3: PROBLEMA → SOLUCIÓN
+        ========================= -->
+        <section class="problem-solution" id="problema-solucion">
+            <div class="container">
+                <h2 class="section-title">¿El marketing te cuesta y no ves resultados?</h2>
+                
+                <div class="problems-grid">
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="#ef4444"/>
+                            </svg>
+                        </div>
+                        <h3 class="problem-title">Pagas publicidad cara</h3>
+                        <p class="problem-text">Meta Ads, Google Ads, influencers… inviertes y no sabes si regresa.</p>
+                    </div>
+                    
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="#ef4444"/>
+                            </svg>
+                        </div>
+                        <h3 class="problem-title">Tus clientes no vuelven</h3>
+                        <p class="problem-text">Compran una vez y desaparecen. No tienes forma de fidelizarlos.</p>
+                    </div>
+                    
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="#ef4444"/>
+                            </svg>
+                        </div>
+                        <h3 class="problem-title">Sin métricas reales</h3>
+                        <p class="problem-text">No sabes cuántas personas entran por recomendación. Invisible.</p>
+                    </div>
+                </div>
+                
+                <div class="divider-arrow">
+                    <div class="arrow-line"></div>
+                    <span class="arrow-text">LinkUp lo resuelve</span>
+                    <div class="arrow-line"></div>
+                </div>
+                
+                <div class="solution-card">
+                    <p class="solution-text">
+                        LinkUp conecta tu comercio con miles de afiliados que recomiendan 
+                        activamente cupones a sus redes. Tú ofreces el beneficio, 
+                        ellos traen el cliente. Pagas solo por resultados reales.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             SECCIÓN 4: BENEFICIOS
+        ========================= -->
+        <section class="benefits" id="beneficios">
+            <div class="container">
+                <div class="badge badge-center">
+                    <span class="badge-icon">✨</span>
+                    <span class="badge-text">BENEFICIOS</span>
+                </div>
+                
+                <h2 class="section-title">Todo lo que ganas al unirte</h2>
+                <p class="section-subtitle">
+                    Un ecosistema diseñado para que tu comercio crezca de forma sostenible
+                </p>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card fade-up">
+                        <div class="benefit-icon">🎯</div>
+                        <h3 class="benefit-title">Clientes comprometidos</h3>
+                        <p class="benefit-text">
+                            Llega a afiliados que ya están buscando dónde usar sus cupones. 
+                            Son clientes con intención real de compra.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card fade-up">
+                        <div class="benefit-icon">📊</div>
+                        <h3 class="benefit-title">Dashboard de control</h3>
+                        <p class="benefit-text">
+                            Visualiza en tiempo real cuántos cupones se canjearon, cuándo y por cuánto. 
+                            Datos claros para tomar decisiones.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card fade-up">
+                        <div class="benefit-icon">🔄</div>
+                        <h3 class="benefit-title">Marketing por resultados</h3>
+                        <p class="benefit-text">
+                            Solo pagas cuando hay conversión real. Sin riesgo, sin presupuestos fijos de publicidad.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card fade-up">
+                        <div class="benefit-icon">🛡️</div>
+                        <h3 class="benefit-title">Verificación y confianza</h3>
+                        <p class="benefit-text">
+                            Tu comercio lleva el sello LinkUp verificado. Genera credibilidad instantánea entre los afiliados.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card fade-up">
+                        <div class="benefit-icon">💬</div>
+                        <h3 class="benefit-title">Chat directo con clientes</h3>
+                        <p class="benefit-text">
+                            Comunicación bidireccional. Atiende consultas, envía promociones y fideliza desde el panel.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card fade-up">
+                        <div class="benefit-icon">💰</div>
+                        <h3 class="benefit-title">Recibe LinkCoins</h3>
+                        <p class="benefit-text">
+                            Cada canje genera LinkCoins en tu billetera. Solicita retiros cuando quieras, de forma transparente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             SECCIÓN 5: CÓMO FUNCIONA
+        ========================= -->
+        <section class="how-it-works" id="como-funciona">
+            <div class="container">
+                <div class="badge badge-center">
+                    <span class="badge-icon">⚡</span>
+                    <span class="badge-text">PROCESO</span>
+                </div>
+                
+                <h2 class="section-title">En 3 pasos tu comercio está en la red</h2>
+                <p class="section-subtitle">Sin tecnicismos, sin burocracia. Alta simple y rápida.</p>
+                
+                <div class="steps-timeline">
+                    <div class="step-card fade-up">
+                        <div class="step-number">01</div>
+                        <div class="step-icon">📝</div>
+                        <h3 class="step-title">Registra tu comercio</h3>
+                        <p class="step-text">
+                            Completa tu perfil: nombre, categoría, descripción, logo y horarios. 
+                            Tu equipo revisa y activa tu cuenta en menos de 48 horas.
+                        </p>
+                        <div class="step-details">
+                            <span class="step-detail-item">✓ Gratis</span>
+                            <span class="step-detail-item">✓ Sin contrato</span>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card fade-up">
+                        <div class="step-number">02</div>
+                        <div class="step-icon">🎟️</div>
+                        <h3 class="step-title">Crea tus cupones</h3>
+                        <p class="step-text">
+                            Define el tipo de descuento: porcentaje, precio fijo, 2x1, freebie. 
+                            Controla la cantidad máxima de canjes y las fechas de vigencia.
+                        </p>
+                        <div class="step-details">
+                            <span class="step-detail-item">✓ Control total</span>
+                            <span class="step-detail-item">✓ Sin límite de cupones</span>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card fade-up">
+                        <div class="step-number">03</div>
+                        <div class="step-icon">💳</div>
+                        <h3 class="step-title">Recibe clientes y cobra</h3>
+                        <p class="step-text">
+                            Los afiliados presentan su QR en tu local. Tú lo escaneas desde 
+                            el panel, validas el canje y listo. Los LinkCoins se acreditan automáticamente.
+                        </p>
+                        <div class="step-details">
+                            <span class="step-detail-item">✓ QR instantáneo</span>
+                            <span class="step-detail-item">✓ Sin efectivo</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step-cta">
+                    <p class="step-cta-text">¿Listo para empezar?</p>
+                    <a href="https://link-up-mlm-2025-merchants.web.app/merchant/onboarding" target="_blank" rel="noopener noreferrer" class="btn-primary">Registrar mi comercio ahora</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             SECCIÓN 6: ESTADÍSTICAS
+        ========================= -->
+        <section class="stats" id="estadisticas">
+            <div class="stats-glow"></div>
+            <div class="container">
+                <div class="badge badge-center">
+                    <span class="badge-icon">📈</span>
+                    <span class="badge-text">RESULTADOS</span>
+                </div>
+                
+                <h2 class="section-title">Lo que LinkUp te garantiza</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card fade-up">
+                        <div class="stat-number">0%</div>
+                        <div class="stat-label">Costo mensual fijo. Pagas solo por resultados reales.</div>
+                    </div>
+                    
+                    <div class="stat-card fade-up">
+                        <div class="stat-number">48<span class="stat-decimal">hs</span></div>
+                        <div class="stat-label">Tiempo máximo de activación garantizado.</div>
+                    </div>
+                    
+                    <div class="stat-card fade-up">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Basado en resultados. Sin contratos de permanencia.</div>
+                    </div>
+                    
+                    <div class="stat-card fade-up">
+                        <div class="stat-number">Tú<span class="stat-decimal"> mandas</span></div>
+                        <div class="stat-label">Tú defines el descuento y pausas cuando quieras.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             SECCIÓN 7: TIPOS DE COMERCIOS
+        ========================= -->
+        <section class="categories" id="categorias">
+            <div class="container">
+                <div class="badge badge-center">
+                    <span class="badge-icon">🏪</span>
+                    <span class="badge-text">CATEGORÍAS</span>
+                </div>
+                
+                <h2 class="section-title">¿Tu negocio encaja en LinkUp?</h2>
+                <p class="section-subtitle">Trabajamos con comercios de todo tipo</p>
+                
+                <div class="categories-grid">
+                    <div class="category-pill fade-up">
+                        <span class="category-icon">🍕</span>
+                        <span class="category-name">Restaurantes</span>
+                    </div>
+                    <div class="category-pill fade-up">
+                        <span class="category-icon">☕</span>
+                        <span class="category-name">Cafés</span>
+                    </div>
+                    <div class="category-pill fade-up">
+                        <span class="category-icon">👗</span>
+                        <span class="category-name">Moda</span>
+                    </div>
+                    <div class="category-pill fade-up">
+                        <span class="category-icon">💇</span>
+                        <span class="category-name">Belleza y cuidado</span>
+                    </div>
+                    <div class="category-pill fade-up">
+                        <span class="category-icon">🏋️</span>
+                        <span class="category-name">Gimnasios</span>
+                    </div>
+                    <div class="category-pill fade-up">
+                        <span class="category-icon">📚</span>
+                        <span class="category-name">Educación</span>
+                    </div>
+                    <div class="category-pill fade-up">
+                        <span class="category-icon">🛒</span>
+                        <span class="category-name">Retail</span>
+                    </div>
+                    <div class="category-pill fade-up">
+                        <span class="category-icon">💊</span>
+                        <span class="category-name">Salud y farmacia</span>
+                    </div>
+                    <div class="category-pill fade-up">
+                        <span class="category-icon">🎉</span>
+                        <span class="category-name">Entretenimiento</span>
+                    </div>
+                    <div class="category-pill fade-up">
+                        <span class="category-icon">🚗</span>
+                        <span class="category-name">Automotriz</span>
+                    </div>
+                    <div class="category-pill fade-up">
+                        <span class="category-icon">🏠</span>
+                        <span class="category-name">Hogar</span>
+                    </div>
+                    <div class="category-pill fade-up">
+                        <span class="category-icon">✈️</span>
+                        <span class="category-name">Turismo</span>
+                    </div>
+                </div>
+                
+                <p class="categories-footer">
+                    ¿No ves tu categoría? Escríbenos, seguro tenemos lugar para tu negocio.
+                </p>
+                
+                <div class="categories-cta">
+                    <a href="https://link-up-mlm-2025-merchants.web.app/market" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                        🛍️ Ir a la cuponera
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             SECCIÓN 8: TESTIMONIOS
+        ========================= -->
+        <section class="testimonials" id="testimonios">
+            <div class="container">
+                <div class="badge badge-center">
+                    <span class="badge-icon">⭐</span>
+                    <span class="badge-text">TESTIMONIOS</span>
+                </div>
+                
+                <h2 class="section-title">Lo que dicen los comercios que ya están en la red</h2>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card fade-up">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Desde que me uní a LinkUp, los fines de semana aumentaron un 30% el flujo de 
+                            clientes. Y lo mejor: sé exactamente cuántos vienen por el cupón."
+                        </p>
+                        <div class="testimonial-author">
+                            <strong>Carlos M.</strong>
+                            <span>Restaurante La Parrilla, Santiago</span>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card fade-up">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Probé Meta Ads durante 6 meses y no vi retorno. Con LinkUp, en el primer mes 
+                            tuve 80 canjes reales. Es otra cosa."
+                        </p>
+                        <div class="testimonial-author">
+                            <strong>Andrea V.</strong>
+                            <span>Spa Ritual, Providencia</span>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card fade-up">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "El panel es muy intuitivo. Yo misma gestiono mis cupones sin necesitar soporte. 
+                            El chat con clientes es un plus que no esperaba."
+                        </p>
+                        <div class="testimonial-author">
+                            <strong>Fernanda L.</strong>
+                            <span>Boutique Nómade, Vitacura</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             SECCIÓN 9: COMPARATIVA
+        ========================= -->
+        <section class="comparison" id="comparacion">
+            <div class="container">
+                <h2 class="section-title">LinkUp vs publicidad tradicional</h2>
+                
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th class="col-feature">Feature</th>
+                                <th class="col-linkup">
+                                    <div class="table-header-content">
+                                        <span class="header-logo">LinkUp</span>
+                                        <span class="header-icon">✓</span>
+                                    </div>
+                                </th>
+                                <th class="col-competitor">
+                                    <div class="table-header-content">
+                                        <span>Meta Ads</span>
+                                        <span class="header-icon-x">✗</span>
+                                    </div>
+                                </th>
+                                <th class="col-competitor">
+                                    <div class="table-header-content">
+                                        <span>Google Ads</span>
+                                        <span class="header-icon-x">✗</span>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="feature-name">Pagas solo por resultados</td>
+                                <td class="check">✓</td>
+                                <td class="cross">✗</td>
+                                <td class="cross">✗</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Clientes con intención real</td>
+                                <td class="check">✓</td>
+                                <td class="cross">✗</td>
+                                <td class="cross">✗</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Dashboard en tiempo real</td>
+                                <td class="check">✓</td>
+                                <td class="partial">Parcial</td>
+                                <td class="partial">Parcial</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Chat directo con el cliente</td>
+                                <td class="check">✓</td>
+                                <td class="cross">✗</td>
+                                <td class="cross">✗</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Sin curva de aprendizaje</td>
+                                <td class="check">✓</td>
+                                <td class="cross">✗</td>
+                                <td class="cross">✗</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Alta gratuita</td>
+                                <td class="check">✓</td>
+                                <td class="cross">✗</td>
+                                <td class="cross">✗</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Fidelización incluida</td>
+                                <td class="check">✓</td>
+                                <td class="cross">✗</td>
+                                <td class="cross">✗</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             SECCIÓN 10: FAQ
+        ========================= -->
+        <section class="faq" id="faqs">
+            <div class="container">
+                <div class="badge badge-center badge-wide">
+                    <span class="badge-icon">❓</span>
+                    <span class="badge-text">PREGUNTAS FRECUENTES</span>
+                </div>
+                
+                <h2 class="section-title">Todo lo que necesitas saber</h2>
+                
+                <div class="faq-list">
+                    <div class="faq-item fade-up">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="faq-question-text">¿Cuánto cuesta unirse a LinkUp como comercio?</span>
+                            <span class="faq-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="currentColor"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>El registro es gratuito. LinkUp opera bajo un modelo de comisión sobre los canjes generados. Sin costos fijos ni mensualidades.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item fade-up">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="faq-question-text">¿Cuánto tiempo tarda la activación de mi comercio?</span>
+                            <span class="faq-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="currentColor"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>El equipo de LinkUp revisa tu solicitud en un plazo de 24 a 48 horas hábiles. Recibirás una notificación cuando tu cuenta esté activa.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item fade-up">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="faq-question-text">¿Yo defino el descuento de mis cupones?</span>
+                            <span class="faq-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="currentColor"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sí, tienes control total. Defines el tipo de descuento, el valor, las fechas de vigencia y el máximo de canjes. Puedes pausar o eliminar un cupón cuando quieras.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item fade-up">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="faq-question-text">¿Cómo se valida un canje en mi local?</span>
+                            <span class="faq-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="currentColor"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>El cliente muestra su QR desde la app LinkUp. Tu cajero lo escanea desde el portal del comercio y el canje queda registrado de inmediato.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item fade-up">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="faq-question-text">¿Cómo recibo mis ganancias?</span>
+                            <span class="faq-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="currentColor"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Cada canje genera LinkCoins en tu billetera del portal. Puedes solicitar el retiro en cualquier momento directamente desde tu panel.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item fade-up">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="faq-question-text">¿Puedo tener varios locales o sucursales?</span>
+                            <span class="faq-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="currentColor"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sí. Puedes tener un perfil de comercio con múltiples puntos de atención. Cada local puede validar canjes de forma independiente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             SECCIÓN 11: CTA FINAL
+        ========================= -->
+        <section class="cta-final" id="cta-form">
+            <div class="cta-wave">
+                <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z" fill="#111111"></path>
+                </svg>
+            </div>
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Empieza hoy. Gratis. Sin riesgo.</h2>
+                    <p class="cta-subtitle">
+                        Sé de los primeros comercios en unirse a LinkUp y empieza a recibir clientes reales desde el primer día.
+                    </p>
+                    <a href="https://link-up-mlm-2025-merchants.web.app/merchant/onboarding" target="_blank" rel="noopener noreferrer" class="btn-cta-large">
+                        Registrar mi comercio ahora
+                    </a>
+                    <div class="cta-proof">
+                        <span class="proof-item">✓ Alta gratuita</span>
+                        <span class="proof-item">✓ Activación en 48hs</span>
+                        <span class="proof-item">✓ Cancela cuando quieras</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             SECCIÓN 12: FOOTER
+        ========================= -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column footer-brand">
+                        <img src="https://www.linkup.community/img/logo-ofcweb.png" alt="LINK UP" class="footer-logo">
+                        <p class="footer-description">
+                            Conectamos comercios con afiliados para beneficio mutuo. 
+                            Marketing por resultados reales.
+                        </p>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Plataforma</h4>
+                        <ul class="footer-links">
+                            <li><a href="https://linkup-community.web.app">Marketplace</a></li>
+                            <li><a href="https://linkup-community.web.app/comercio-registro">Portal Comercios</a></li>
+                            <li><a href="#como-funciona">Cómo funciona</a></li>
+                            <li><a href="/">Para Afiliados</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Legal</h4>
+                        <ul class="footer-links">
+                            <li><a href="#terminos">Términos y condiciones</a></li>
+                            <li><a href="#privacidad">Política de privacidad</a></li>
+                            <li><a href="#cookies">Política de cookies</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Contacto</h4>
+                        <ul class="footer-links">
+                            <li><a href="mailto:info@linkup.community">info@linkup.community</a></li>
+                            <li><a href="#soporte">Soporte</a></li>
+                        </ul>
+                        <div class="footer-social">
+                            <a href="#" aria-label="Instagram" class="social-link">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" fill="currentColor"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Facebook" class="social-link">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" fill="currentColor"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Twitter" class="social-link">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.46 6c-.85.38-1.76.63-2.72.74a4.76 4.76 0 0 0 2.09-2.63c-.92.54-1.94.94-3.03 1.15a4.74 4.74 0 0 0-8.08 4.32A13.47 13.47 0 0 1 3.01 4.7a4.74 4.74 0 0 0 1.47 6.33A4.7 4.7 0 0 1 2.33 10v.06a4.74 4.74 0 0 0 3.8 4.65 4.76 4.76 0 0 1-2.14.08 4.74 4.74 0 0 0 4.43 3.29A9.52 9.52 0 0 1 2 19.54 13.44 13.44 0 0 0 9.29 22c8.75 0 13.54-7.25 13.54-13.54 0-.21 0-.41-.01-.61A9.65 9.65 0 0 0 25 5.48a9.4 9.4 0 0 1-2.54.7" fill="currentColor"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p class="copyright">© 2026 LINK UP. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="comercios-script.js"></script>
+
+    <!-- Botón de Chat IA Flotante -->
+    <div class="chat-widget">
+        <button class="chat-button" id="chatButton" aria-label="Abrir chat de soporte">
+            <img class="chat-icon" src="https://res.cloudinary.com/df7h4kmrk/image/upload/v1768053513/cupichat_oudhnt.gif" alt="Chat" width="56" height="56">
+            <svg class="close-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
+            </svg>
+        </button>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar">
+                        <img src="img/cupi_profile.png" alt="Cupi" width="40" height="40">
+                    </div>
+                    <div>
+                        <h4>Cupi Asistente Virtual</h4>
+                        <span class="status-online">En línea</span>
+                    </div>
+                </div>
+                <button class="minimize-btn" id="minimizeChat" aria-label="Minimizar chat">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 13H5v-2h14v2z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="chat-message bot-message">
+                    <div class="message-avatar">
+                        <img src="img/cupi_profile.png" alt="Cupi" width="32" height="32">
+                    </div>
+                    <div class="message-content">
+                        <p>¡Hola! 👋 Soy Cupi tu asistente virtual de LINK UP. ¿En qué puedo ayudarte hoy?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." aria-label="Campo de mensaje">
+                <button class="send-btn" id="sendButton" aria-label="Enviar mensaje">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
