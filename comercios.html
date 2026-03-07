@@ -16,6 +16,24 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="comercios-styles.css">
+    <style>
+    .modal-com { display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,.6); overflow-y:auto; }
+    .modal-com.active { display:flex; align-items:flex-start; justify-content:center; padding:2rem 1rem; }
+    .modal-com .modal-content { background:#fff; border-radius:12px; max-width:760px; width:100%; max-height:85vh; overflow-y:auto; box-shadow:0 20px 60px rgba(0,0,0,.3); }
+    .modal-com .modal-header { display:flex; justify-content:space-between; align-items:center; padding:1.5rem 2rem; border-bottom:1px solid #e5e7eb; position:sticky; top:0; background:#fff; z-index:1; }
+    .modal-com .modal-header h2 { font-size:1.1rem; font-weight:700; color:#1a1a2e; margin:0; }
+    .modal-com .close-modal-com { font-size:1.8rem; cursor:pointer; color:#6b7280; line-height:1; }
+    .modal-com .close-modal-com:hover { color:#1a1a2e; }
+    .modal-com .modal-body { padding:2rem; }
+    .modal-com .terms-logo { text-align:center; margin-bottom:1.5rem; }
+    .modal-com .terms-intro { background:#f8f9fa; border-radius:8px; padding:1.2rem; margin-bottom:1.5rem; color:#374151; }
+    .modal-com .terms-section-item { margin-bottom:1.5rem; border-bottom:1px solid #f3f4f6; padding-bottom:1.2rem; }
+    .modal-com .terms-section-item:last-child { border-bottom:none; }
+    .modal-com .terms-section-item h3 { color:#1a1a2e; font-size:1rem; font-weight:700; margin-bottom:.6rem; }
+    .modal-com .terms-section-item h4 { color:#374151; font-size:.9rem; font-weight:600; margin:.8rem 0 .4rem; }
+    .modal-com .terms-section-item p { color:#4b5563; font-size:.93rem; line-height:1.6; margin-bottom:.5rem; }
+    .modal-com .terms-section-item ul { color:#4b5563; font-size:.93rem; line-height:1.6; padding-left:1.4rem; margin-bottom:.5rem; }
+    </style>
 </head>
 <body>
 
@@ -738,7 +756,7 @@
             <div class="container">
                 <div class="footer-grid">
                     <div class="footer-column footer-brand">
-                        <img src="https://www.linkup.community/img/logo-ofcweb.png" alt="LINK UP" class="footer-logo">
+                        <img src="img/logo-ofcweb.png" alt="LINK UP" class="footer-logo">
                         <p class="footer-description">
                             Conectamos comercios con afiliados para beneficio mutuo. 
                             Marketing por resultados reales.
@@ -758,8 +776,8 @@
                     <div class="footer-column">
                         <h4 class="footer-title">Legal</h4>
                         <ul class="footer-links">
-                            <li><a href="#terminos">Términos y condiciones</a></li>
-                            <li><a href="#privacidad">Política de privacidad</a></li>
+                            <li><a href="#" id="openTermsCom" class="modal-link-com">Términos y condiciones</a></li>
+                            <li><a href="#" id="openPrivacyCom" class="modal-link-com">Política de privacidad</a></li>
                             <li><a href="#cookies">Política de cookies</a></li>
                         </ul>
                     </div>
@@ -796,6 +814,254 @@
             </div>
         </footer>
     </main>
+
+    <!-- Modal Términos Comercios -->
+    <div id="termsModalCom" class="modal-com">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📄 TÉRMINOS Y CONDICIONES PARA COMERCIOS ALIADOS – LINKUP</h2>
+                <span class="close-modal-com">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="terms-logo"><img src="img/logo-ofcweb.png" alt="LinkUp" width="70"></div>
+                <div class="terms-intro">
+                    <p><em>Última actualización: 2026</em></p>
+                    <p>Los presentes Términos y Condiciones regulan la participación de los comercios aliados dentro del ecosistema digital de LinkUp. La plataforma es operada por <strong>Cachasfull Negocios S.A.</strong>, representada por <strong>Franklin Javier Paredes Meza</strong>.</p>
+                    <p>Al registrarse como comercio aliado, el comercio declara haber leído, comprendido y aceptado los presentes términos.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>1. Objeto del acuerdo</h3>
+                    <p>El presente documento regula la relación entre LinkUp y los comercios afiliados. LinkUp actúa como una plataforma tecnológica de intermediación digital que facilita la conexión entre usuarios y comercios aliados mediante herramientas digitales, promociones y beneficios comerciales.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>2. Registro del comercio</h3>
+                    <p>Para participar dentro de la plataforma LinkUp, el comercio deberá:</p>
+                    <ul>
+                        <li>Completar el proceso de registro dentro de la plataforma</li>
+                        <li>Proporcionar información comercial veraz y actualizada</li>
+                        <li>Aceptar los presentes Términos y Condiciones</li>
+                        <li>Cumplir con los procesos de verificación establecidos por la plataforma</li>
+                    </ul>
+                    <p>LinkUp se reserva el derecho de aprobar, rechazar o suspender solicitudes de afiliación cuando lo considere necesario.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>3. Beneficios de participar en LinkUp</h3>
+                    <ul>
+                        <li>Promoción del negocio dentro de la plataforma</li>
+                        <li>Visibilidad ante la comunidad de usuarios</li>
+                        <li>Captación de nuevos clientes</li>
+                        <li>Herramientas digitales para promocionar productos o servicios</li>
+                        <li>Participación en campañas promocionales del ecosistema</li>
+                    </ul>
+                </div>
+                <div class="terms-section-item">
+                    <h3>4. Promociones, descuentos y cupones</h3>
+                    <p>Los comercios aliados podrán publicar promociones, descuentos, cupones digitales y beneficios exclusivos para usuarios de LinkUp. El comercio es responsable de garantizar que las promociones publicadas sean claras, reales y respetadas al momento del consumo.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>5. Cumplimiento de promociones</h3>
+                    <p>El comercio se compromete a respetar las promociones y beneficios publicados. El incumplimiento podrá generar advertencias, suspensión temporal o cancelación definitiva de la afiliación.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>6. Uso del sistema de cupones digitales</h3>
+                    <p>LinkUp podrá habilitar un sistema de cupones digitales o beneficios promocionales que los usuarios podrán utilizar en los comercios afiliados. El comercio deberá validar dichos cupones conforme a las condiciones publicadas dentro de la plataforma.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>7. Sistema de pagos dentro del ecosistema</h3>
+                    <p>Las transacciones realizadas dentro de la plataforma podrán involucrar el uso de saldo interno, recompensas generadas dentro del ecosistema y unidades digitales denominadas LinkCoins. El comercio acepta que parte de las transacciones realizadas por los usuarios puedan ser procesadas mediante el sistema interno de la plataforma.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>8. Liquidación de pagos a comercios</h3>
+                    <p>Las liquidaciones correspondientes a los consumos realizados en los comercios se procesarán de forma <strong>semanal</strong>:</p>
+                    <ul>
+                        <li>Los retiros o solicitudes de pago podrán realizarse los días <strong>lunes</strong> a través de la plataforma.</li>
+                        <li>LinkUp realizará procesos de verificación y conciliación de transacciones.</li>
+                        <li>Los pagos serán procesados hasta el día <strong>viernes</strong> de la misma semana, mediante transferencia bancaria u otros medios electrónicos habilitados.</li>
+                    </ul>
+                    <p>LinkUp podrá retener temporalmente liquidaciones cuando existan indicios de fraude, irregularidades o uso indebido del sistema.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>9. Uso de marca y promoción</h3>
+                    <p>El comercio autoriza a LinkUp a utilizar su nombre comercial, logotipo, imágenes del establecimiento y descripción de productos o servicios con el objetivo de promocionar el negocio dentro de la plataforma, redes sociales o campañas publicitarias.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>10. Responsabilidad del comercio</h3>
+                    <p>El comercio es responsable de la calidad de los productos o servicios ofrecidos, el cumplimiento de promociones y la atención al cliente. LinkUp actúa únicamente como intermediario digital.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>11. Prevención de fraude y auto-consumo</h3>
+                    <p>Queda prohibido generar consumos ficticios o simulados, realizar auto-consumo fraudulento, manipular el sistema de recompensas o coordinar transacciones para obtener beneficios artificiales.</p>
+                    <p>En caso de detectarse irregularidades, LinkUp podrá suspender temporalmente la cuenta, cancelar la afiliación, anular transacciones fraudulentas o retener liquidaciones pendientes.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>12. Conductas prohibidas</h3>
+                    <p>Queda prohibido utilizar la plataforma para actividades fraudulentas, promociones engañosas, manipulación del sistema o actividades ilegales.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>13. Suspensión o cancelación de la afiliación</h3>
+                    <p>LinkUp podrá suspender o cancelar la participación de un comercio cuando se detecte fraude, se incumplan promociones, se afecte la experiencia de los usuarios o se incumplan los presentes términos.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>14. Limitación de responsabilidad de la plataforma</h3>
+                    <p>LinkUp no será responsable por la calidad de productos o servicios de los comercios, disputas comerciales entre usuarios y comercios, pérdidas económicas entre las partes, retrasos causados por bancos o pasarelas de pago, ni interrupciones técnicas o eventos de fuerza mayor.</p>
+                    <p>La responsabilidad económica total de LinkUp frente a cualquier reclamación estará limitada al monto de las transacciones efectivamente registradas en el sistema relacionadas con el evento reclamado.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>15. Modificaciones del servicio</h3>
+                    <p>LinkUp podrá modificar funcionalidades, herramientas o condiciones del servicio cuando sea necesario para mejorar el funcionamiento de la plataforma.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>16. Protección de datos</h3>
+                    <p>Los datos proporcionados por los comercios serán tratados conforme a la Política de Privacidad de LinkUp.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>17. Terminación del acuerdo</h3>
+                    <p>El comercio podrá solicitar su retiro de la plataforma en cualquier momento. LinkUp también podrá terminar la afiliación cuando se incumplan los presentes términos.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>18. Jurisdicción</h3>
+                    <p>Cualquier controversia relacionada con el uso de la plataforma se resolverá conforme a la legislación aplicable a la jurisdicción correspondiente al operador de la plataforma.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>19. Aceptación de los términos</h3>
+                    <p><strong>Al registrarse y utilizar la plataforma como comercio aliado, el negocio declara haber leído, comprendido y aceptado los presentes Términos y Condiciones para Comercios Aliados de LinkUp.</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Política de Privacidad Comercios -->
+    <div id="privacyModalCom" class="modal-com">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🔐 POLÍTICA DE PRIVACIDAD – PLATAFORMA LINKUP</h2>
+                <span class="close-modal-com">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="terms-logo"><img src="img/logo-ofcweb.png" alt="LinkUp" width="70"></div>
+                <div class="terms-intro">
+                    <p><em>Última actualización: 01 / 02 / 2026</em></p>
+                    <p>En LinkUp respetamos y protegemos la privacidad de los datos personales de nuestros usuarios y comercios aliados, conforme a la Ley Orgánica de Protección de Datos Personales del Ecuador.</p>
+                    <p><strong>El uso de la plataforma implica la aceptación expresa de esta Política.</strong></p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>1. Responsable del tratamiento de datos</h3>
+                    <p><strong>LinkUp</strong><br>Razón social: CACHASFULLNEGOCIOS S.A.<br>RUC: 1792892511001<br>Domicilio: Miguel Burbano N48-128<br>Correo de contacto: cachasfull@gmail.com</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>2. Datos personales que recopilamos</h3>
+                    <h4>2.1 Datos de Usuarios</h4>
+                    <ul>
+                        <li>Nombre y apellido</li>
+                        <li>Correo electrónico</li>
+                        <li>Número de teléfono</li>
+                        <li>Ciudad o ubicación general</li>
+                        <li>Enlace de registro o referencia</li>
+                        <li>Información de uso dentro de la plataforma</li>
+                    </ul>
+                    <h4>2.2 Datos de Comercios</h4>
+                    <ul>
+                        <li>Nombre comercial</li>
+                        <li>Datos de contacto</li>
+                        <li>Información básica del negocio</li>
+                        <li>Datos de cupones o descuentos</li>
+                        <li>Historial de transacciones internas</li>
+                    </ul>
+                    <h4>2.3 Datos Bancarios (Comercios)</h4>
+                    <ul>
+                        <li>Nombre del titular de la cuenta bancaria</li>
+                        <li>Número de cédula de identidad</li>
+                        <li>Tipo y número de cuenta</li>
+                        <li>Entidad financiera</li>
+                    </ul>
+                    <p><strong>⚠️ LinkUp NO recopila información financiera sensible como claves bancarias o accesos a cuentas.</strong></p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>3. Finalidad del tratamiento de datos</h3>
+                    <ul>
+                        <li>Operar y administrar la plataforma LinkUp</li>
+                        <li>Gestionar cuentas de usuarios y comercios</li>
+                        <li>Registrar el uso de cupones y beneficios</li>
+                        <li>Administrar el sistema interno de Linkcoins</li>
+                        <li>Procesar solicitudes de conversión de Linkcoins</li>
+                        <li>Enviar comunicaciones informativas y operativas</li>
+                        <li>Cumplir obligaciones legales y regulatorias</li>
+                    </ul>
+                    <p><strong>👉 LinkUp no vende, alquila ni comparte datos personales con terceros no autorizados.</strong></p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>4. Base legal del tratamiento</h3>
+                    <ul>
+                        <li>El consentimiento libre, informado y expreso del titular</li>
+                        <li>La ejecución de servicios propios de la plataforma</li>
+                        <li>El cumplimiento de obligaciones legales</li>
+                    </ul>
+                </div>
+                <div class="terms-section-item">
+                    <h3>5. Conservación de los datos</h3>
+                    <p>Los datos serán conservados mientras exista una cuenta activa o mientras sea necesario para cumplir obligaciones legales. El titular podrá solicitar la eliminación de sus datos conforme a la ley, salvo impedimento legal.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>6. Derechos de los titulares</h3>
+                    <ul>
+                        <li>Acceso a sus datos personales</li>
+                        <li>Rectificación de información incorrecta</li>
+                        <li>Eliminación de sus datos</li>
+                        <li>Oposición al tratamiento</li>
+                        <li>Portabilidad (cuando aplique)</li>
+                    </ul>
+                    <p>Las solicitudes deberán enviarse a: <strong>cachasfull@gmail.com</strong></p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>7. Seguridad de la información</h3>
+                    <p>LinkUp adopta medidas técnicas y organizativas razonables para proteger los datos contra accesos no autorizados, pérdida, uso indebido, alteración o divulgación. No obstante, ningún sistema es completamente infalible.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>8. Uso de servicios de terceros</h3>
+                    <p>LinkUp podrá utilizar servicios de terceros para hosting, autenticación, análisis de uso y envío de comunicaciones. Estos terceros acceden únicamente a la información necesaria y están sujetos a confidencialidad.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>9. Comunicaciones</h3>
+                    <p>LinkUp podrá enviar comunicaciones relacionadas con el funcionamiento de la plataforma, actualizaciones importantes e información operativa. El usuario podrá solicitar dejar de recibir comunicaciones no esenciales.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>10. Menores de edad</h3>
+                    <p><strong>LinkUp no está dirigido a menores de 18 años.</strong> Si se detecta información de un menor, será eliminada de forma inmediata.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>11. Modificaciones a la política</h3>
+                    <p>LinkUp podrá modificar esta Política de Privacidad cuando sea necesario. Las modificaciones serán notificadas y el uso continuado de la plataforma implicará su aceptación.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>12. Legislación aplicable y jurisdicción</h3>
+                    <p>Esta Política se rige por las leyes de la República del Ecuador.</p>
+                </div>
+                <div class="terms-section-item">
+                    <h3>13. Aceptación</h3>
+                    <p><strong>El usuario o comercio declara haber leído, comprendido y aceptado esta Política de Privacidad al registrarse y utilizar la plataforma LinkUp.</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        var termsModal = document.getElementById('termsModalCom');
+        var privacyModal = document.getElementById('privacyModalCom');
+        document.getElementById('openTermsCom').addEventListener('click', function(e) { e.preventDefault(); termsModal.classList.add('active'); document.body.style.overflow='hidden'; });
+        document.getElementById('openPrivacyCom').addEventListener('click', function(e) { e.preventDefault(); privacyModal.classList.add('active'); document.body.style.overflow='hidden'; });
+        document.querySelectorAll('.close-modal-com').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                termsModal.classList.remove('active');
+                privacyModal.classList.remove('active');
+                document.body.style.overflow='';
+            });
+        });
+        [termsModal, privacyModal].forEach(function(m) {
+            m.addEventListener('click', function(e) { if (e.target === m) { m.classList.remove('active'); document.body.style.overflow=''; } });
+        });
+    })();
+    </script>
 
     <script src="comercios-script.js"></script>
 
