@@ -51,7 +51,7 @@ self.addEventListener('notificationclick', (event) => {
         }
         // Si no hay ventana abierta, abrir una nueva
         if (clients.openWindow) {
-          return clients.openWindow('/')
+          return clients.openWindow('/cuponera/')
         }
       })
   )
