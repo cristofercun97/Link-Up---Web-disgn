@@ -1,6 +1,8 @@
 {
   "rewrites": [
     { "source": "/cuponera", "destination": "/cuponera/index.html" },
-    { "source": "/cuponera/:path*", "destination": "/cuponera/index.html" }
+    { "source": "/cuponera/:path*", "destination": "/cuponera/index.html" },
+    { "source": "/afiliados", "destination": "/afiliados/index.html" },
+    { "source": "/afiliados/:path*", "destination": "/afiliados/index.html" }
   ]
 }
