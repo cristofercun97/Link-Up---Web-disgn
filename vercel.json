@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/cuponera", "destination": "/cuponera/index.html" },
+    { "source": "/cuponera/:path*", "destination": "/cuponera/index.html" }
+  ]
+}
