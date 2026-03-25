@@ -6,7 +6,7 @@
     { "source": "/afiliados/:path*", "destination": "/afiliados/index.html" },
     { "source": "/leads-afiliado", "destination": "https://linkup-encuesta-2026.web.app/index.html" },
     { "source": "/leads-comercios", "destination": "https://linkup-encuesta-2026.web.app/comercios.html" },
-    { "source": "/leads", "destination": "https://linkup-encuesta-2026.web.app/admin" },
+    { "source": "/leads", "destination": "https://linkup-encuesta-2026.web.app/admin/login" },
     { "source": "/leads/:path*", "destination": "https://linkup-encuesta-2026.web.app/admin/:path*" }
   ]
 }
