@@ -436,11 +436,11 @@ document.addEventListener('DOMContentLoaded', initRewardsCarousel);
 const CALCULATOR_CONSTANTS = {
     MONTHLY_COUPON_VALUE: 100, // USD por cuponera mensual
     REFERRAL_PERCENTAGES: {
-        1: 0.10, // Gen 1: 10%
-        2: 0.05, // Gen 2: 5%
+        1: 0.20, // Gen 1: 20%
+        2: 0.10, // Gen 2: 10%
         3: 0.05, // Gen 3: 5%
-        4: 0.03, // Gen 4: 3%
-        5: 0.02  // Gen 5: 2%
+        4: 0.05, // Gen 4: 5%
+        5: 0.05  // Gen 5: 5%
     },
     CONSUMPTION_PERCENTAGES: {
         0: 0.30, // Nivel 0: 30%
