@@ -1,9 +1,9 @@
 {
   "rewrites": [
-    { "source": "/cuponera", "destination": "/cuponera/index.html" },
-    { "source": "/cuponera/:path*", "destination": "/cuponera/index.html" },
-    { "source": "/afiliados", "destination": "/afiliados/index.html" },
-    { "source": "/afiliados/:path*", "destination": "/afiliados/index.html" },
+    { "source": "/afiliados", "destination": "https://linkup-community.web.app/" },
+    { "source": "/afiliados/:path*", "destination": "https://linkup-community.web.app/:path*" },
+    { "source": "/cuponera", "destination": "https://link-up-mlm-2025-merchants.web.app/" },
+    { "source": "/cuponera/:path*", "destination": "https://link-up-mlm-2025-merchants.web.app/:path*" },
     { "source": "/leads-afiliado", "destination": "https://linkup-encuesta-2026.web.app/index.html" },
     { "source": "/leads-comercios", "destination": "https://linkup-encuesta-2026.web.app/comercios.html" },
     { "source": "/leads", "destination": "https://linkup-encuesta-2026.web.app/admin/login" },
