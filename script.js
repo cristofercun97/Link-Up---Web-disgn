@@ -70,6 +70,47 @@ function changeSlide(direction) {
 }
 
 // ========================================
+// VIDEO GUIDES CAROUSEL
+// ========================================
+let currentVideoSlide = 1;
+const totalVideoSlides = 5;
+
+function changeVideoSlide(direction) {
+    currentVideoSlide += direction;
+    if (currentVideoSlide > totalVideoSlides) currentVideoSlide = 1;
+    else if (currentVideoSlide < 1) currentVideoSlide = totalVideoSlides;
+    updateVideoCarousel();
+}
+
+function goToVideoSlide(index) {
+    currentVideoSlide = index;
+    updateVideoCarousel();
+}
+
+function updateVideoCarousel() {
+    // Update video slides
+    document.querySelectorAll('.video-slide').forEach(function(el) {
+        el.classList.remove('active');
+    });
+    var activeSlide = document.querySelector('.video-slide[data-video="' + currentVideoSlide + '"]');
+    if (activeSlide) activeSlide.classList.add('active');
+
+    // Update dots
+    document.querySelectorAll('.vdot').forEach(function(el) {
+        el.classList.remove('active');
+    });
+    var activeDot = document.querySelector('.vdot[data-dot="' + currentVideoSlide + '"]');
+    if (activeDot) activeDot.classList.add('active');
+
+    // Update info panels
+    document.querySelectorAll('.video-info-panel').forEach(function(el) {
+        el.classList.remove('active');
+    });
+    var activePanel = document.querySelector('.video-info-panel[data-panel="' + currentVideoSlide + '"]');
+    if (activePanel) activePanel.classList.add('active');
+}
+
+// ========================================
 // ANIMACIÓN DE CÍRCULOS EN EL HERO
 // ========================================
 function initHeroCircles() {
