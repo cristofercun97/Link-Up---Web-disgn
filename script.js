@@ -73,7 +73,7 @@ function changeSlide(direction) {
 // VIDEO GUIDES CAROUSEL
 // ========================================
 let currentVideoSlide = 1;
-const totalVideoSlides = 5;
+const totalVideoSlides = 6;
 
 function changeVideoSlide(direction) {
     currentVideoSlide += direction;
